@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Programming Notes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<h1 class="title">Programming Notes
+  <img src="https://lh3.googleusercontent.com/--c8480byC9k/AAAAAAAAAAI/AAAAAAAAAJo/SP9LwTne7mA/s46-c-k-no/photo.jpg"
+       alt="notes">
+</h1>
+
+
+<div class="toc">
+  <h1 class="toc">Table of Contents</h1>
+  <ol>
+    <li>
+      <a href="#lesson-1">Lesson 1: The Basics of the Web and HTML</a>
+      <ul>
+        <li><a href="#lesson-1-1">Introduction to the Web</a></li>
+        <li><a href="#lesson-1-2">World-Wide Web</a></li>
+        <li><a href="#lesson-1-3">Components of the Web</a></li>
+        <li><a href="#lesson-1-4">HTML Basics</a></li>
+        <li><a href="#lesson-1-5">HTML Tags</a></li>
+        <li><a href="#lesson-1-6">HTML Tag Demos</a></li>
+        <li><a href="#lesson-1-7">HTML Document Structure</a></li>
+        <li><a href="#lesson-1-8">Why Computers Are Stupid</a></li>
+        <li><a href="#lesson-1-9">End Summary</a></li>
+      </ul>
+      <br>
+    </li>
+
+    <li>
+      <a href="#lesson-2">Lesson 2: Creating a Structured Document With HTML</a>
+      <ul>
+        <li><a href="#lesson-2-1">The First Step</a></li>
+        <li><a href="#lesson-2-2">Exploring the Web</a></li>
+        <li><a href="#lesson-2-3">Page Structure</a></li>
+        <li><a href="#lesson-2-4">[ND] Focus Checkpoint</a></li>
+        <li><a href="#lesson-2-5">HTML-CSS-DOM</a></li>
+        <li><a href="#lesson-2-6">Boxes Everywhere</a></li>
+        <li><a href="#lesson-2-7">Boxes, Grids, and Rules</a></li>
+        <li><a href="#lesson-2-8">[ND] How to Listen to Experts</a></li>
+        <li><a href="#lesson-2-9">Interview With Jacques</a></li>
+        <li><a href="#lesson-2-10">Boxes to HTML</a></li>
+        <li><a href="#lesson-2-11">Summary</a></li>
+      </ul>
+      <br>
+    </li>
+
+    <li>
+      <a href="#lesson-3">Lesson 3: Adding CSS Style and HTML Structure</a>
+      <ul>
+        <li><a href="#lesson-3-1">Where to Focus Your Attention</a></li>
+        <li><a href="#lesson-3-2">Understanding CSS</a></li>
+        <li><a href="#lesson-3-3">[ND] Thinking About Cascading</a></li>
+        <li><a href="#lesson-3-4">Styling Up</a></li>
+        <li><a href="#lesson-3-5">[ND] CSS Summary and Reference</a>
+          <ul>
+            <li><a href="#lesson-3-5-1">What is CSS</a></li>
+            <li><a href="#lesson-3-5-2">How Does CSS "Control" HTML?</a></li>
+            <li><a href="#lesson-3-5-3">CSS Vocabulary</a></li>
+            <li><a href="#lesson-3-5-4">Selecting by Class</a></li>
+            <li><a href="#lesson-3-5-5">How Do I Include CSS Styling in My Web Page?</a></li>
+          </ul>
+        </li>
+        <li><a href="#lesson-3-6">Using Semantic Tags</a></li>
+        <li><a href="#lesson-3-7">The Box Revisited</a></li>
+        <li>
+          <a href="#lesson-3-8">[ND] Box Sizing and Positioning</a>
+          <ul>
+            <li><a href="#lesson-3-8-1">Summary</a>
+              <ul>
+                <li><a href="#lesson-3-8-1-1">Box Sizing</a></li>
+                <li><a href="#lesson-3-8-1-2">Box Positioning</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#lesson-3-9">Code, Test, Refine</a></li>
+      </ul>
+      <br>
+    </li>
+
+    <li><a href="#resources">Resources</a>
+  </ol>
+</div>
+
+<div class="lesson">
+  <h2 id="lesson-1">Lesson 1: The Basics of the Web and HTML<a href="#" class="right">Back to Top &circ;</a></h2>
+
+  <div class="topic">
+    <h3 id="lesson-1-1">Introduction to the Web<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>HTML is the main document type of the web. The web runs on HTTP, which is the protocol that unites it.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-1-2">World-wide Web:<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <p>The World-wide web is a collection of HTML documents, or, documents made of HTML(HyperText Markup Language), and was invented in the 1990's. HTML documents are the basis for almost every web page. These documents are accessed by URL's. A URL looks
+      something like this:
+      <br>
+
+      <br> http://www.fancyicons.com/free-icons/220/foods/png/256/ice_cream_256.png
+      <br>
+
+      <br> It refers to a certain document on the web. When a person goes to a certain web page, their computer sends a HTTP Request to a server. The server then sends back the corresponding HTML document where it is displayed on the screen by a web browser(chrome,
+      safari, firefox, etc.)</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-1-3">Components of the Web:<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <p>The only things that the web needs to run are you, your computer running a browser, the internet, and servers. Servers are also computers, except they host files, rather than browsing them.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-1-4">HTML Basics<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <p>HTML is made up of multiple things. One of them is <em>text content</em>. Text content is what you see on a HTML document. Another component that makes up HTML is <em>markup</em>. Markup is what the text content <em>looks</em> like. HTML is also made up of references to other documents. These can be images, videos, or many other things. The last thing that HTML is made of is links to other pages.</p>
+
+    <p>If you type plain text in HTML, it ends up looking like plain text. To make text look different, we need to use markup.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-1-5">HTML Tags<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <p>Markup is made of things called tags, which make text look different. Tags have one main structure. Unless the tag is a void tag, the opening tag comes first, followed by the contents, and ended with the closing tag. A void tag has does not have a
+      closing tag, and therefore does not need content. As a result, void tags are composed only of opening tags.</p>
+
+    <p>There are multiple types of tags. Some of them are the bold&lt;b&gt;, italic;&lt;em&gt;, span&lt;span&gt;, div&lt;div&gt;, break&lt;br&gt;, paragraph&lt;p&gt;, anchor&lt;a&gt;, and image&lt;img&gt; tags. Of all of these tags, the only void tag is
+      the break tag. Some of these tags have the same function, but do this in different ways. For example, the break tag and the paragraph tag both put text on multiple lines. However, they are different because they are different types of tags. The
+      break tag is an <em>inline</em> tag, whereas the paragraph tag is a <em>block</em> tag. Inline tags are only text, but block tags make an imaginary box around the text. This box can have a certain height or width.</p>
+
+    <p>Text ends up in one long line unless you use either the break tag, or the paragraph tag. We can use something called <em>whitespace</em> to make text appear on seperate lines. This is just using the break or paragraph tag multiple times.</p>
+
+    <p>Tags can have multiple attributes. Attributes are extra bits of information. They are used to define the characteristics of an HTML element and are placed in the opening tag.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-1-6">HTML Tag Demos<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <div class="text">
+      <ul>
+        <li>Bold Tag: (makes content bold):  <b>Dhriti</b>.
+          <pre>&lt;b&gt;Dhriti&lt;b&gt;</pre>
+        </li>
+        <li>Italic Tag: (makes content italic: )<em>Dhriti</em>
+          <pre>&lt;em&gt;Dhriti&lt;em&gt;</pre>
+        </li>
+        <li>Anchor Tag:(makes content a link(inline))<a href="https://udacity.com">Udacity</a>
+          <pre>&lt;a href="Udacity.com"&gt;Udacity&lt;/a&gt;</pre>
+        </li>
+        <li>Image Tag: (makes URL an image(inline))
+          <pre>&lt;img src="http://www.fancyicons.com/free-icons/220/foods/png/256/ice_cream_256.png" alt="Ice Cream"&gt;</pre>
+          <br>
+          <img src="http://www.fancyicons.com/free-icons/220/foods/png/256/ice_cream_256.png" alt="Ice Cream"><br>
+        </li>
+        <li>Break Tag: (puts text on different lines(inline))
+          <pre>&lt;br&gt;Ice&lt;br&gt;Cream</pre>
+          <br>Ice
+          <br>Cream
+        </li>
+        <li>Paragraph Tag: (puts content in a paragraph(block))
+          <pre>&lt;p&gt;Ice&lt;/p&gt;&lt;p&gt;Cream&lt;/p&gt;</pre>
+          <br>
+          <p>Ice</p>
+          <p>Cream</p>
+        </li>
+        <li>Span Tag:(contains content(inline))
+          <pre>&lt;span class=”foo”&gt;Dhriti&lt;/span&gt;</pre>
+          <span class=”foo”>Dhriti</span>
+        </li>
+        <li>Div Tag: (contains content(block))
+          <pre>&lt;div class=”word”&gt;Dhriti&lt;/div&gt;</pre>
+          <div class=”word”>Dhriti</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-1-7">HTML Document Structure<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>A simple HTML document:</p>
+    <pre>
+      &lt;html&gt;
+      &lt;head&gt;
+      &lt;title&gt;Title!&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;b&gt;content&lt;b&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </pre>
+    <p>The head contains metadata, Javascript, or CSS(filing). The body has the content of the document. Here is a simplified view of the HTML Document:</p>
+    <pre>
+      &lt;head&gt;
+      Title(CSS, Javascript)
+      &lt;/head&gt;
+      &lt;body&gt;
+      contents
+      &lt;/body&gt;
+    </pre>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-1-8">Why Computers Are Stupid<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <p>Some programmers describe computers as "stupid". Usually, what they mean is that computers are very sensitive to typos and small mistakes, whereas humans can still understand it. Because they are so sensitive, what we consider "small mistakes" could lead to big problems in programming. For example, if you forget to put an end tag but remember the opening tag, the computer applies the function of the opening tag to all the text following it instead of the text section you meant to apply it to.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-1-9">End Summary<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <ul>
+      <li>two main topics = overview of internet, introduction to HTML</li>
+      <li>overview of internet:big-picture view of how the internet works/servers, browsers, internet, HTTP</li>
+      <li>introduction to HTML: HTML tags (b, p, em). even though these tags aren't visible to users of a web page, they still carry meaning that is meaningful to web browsers</li>
+      <li>(What a Web Page Is)a web page is a text document written in a language called HTML. Web browsers read these documents, and then interpret and display them (How Coding Works)coding happens when programmers write text in a language that a computer
+        can understand so that computer can then follow the instructions the programmer wrote</li>
+      <li>(Computers Are Stupid)programmers need to write exactly the way a computer understands (also known as writing with correct "syntax")</li>
+      <li>(Basic HTML Vocabulary):</li>
+      <li>Tag: An HTML tag is always contained within angled brackets. Most tags have an opening tag (p for example) and a closing tag, (/p). Some tags (called "void" tags) do not require a closing tag (like the br tag).</li>
+      <li>Element: An HTML element refers to everything within a set of opening and closing tags.</li>
+      <li>Attribute: This is a property of an HTML element. For example, to set the href attribute of an anchor tag to the Udacity URL, you would write(a href="www.udacity.com")</li>
+      <li>container elements: elements that do nothing other than contain content inside of them. Two examples of tags which are container elements are span and div.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="lesson">
+  <h2 id="lesson-2">Lesson 2: Creating a Structured Document With HTML<a href="#" class="right">Back to Top &circ;</a></h2>
+
+  <div class="topic">
+    <h3 id="lesson-2-1">The First Step<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <ul>
+      <li>html = structure</li>
+      <li>css = styling</li>
+      <li>javascript = interactive components</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-2-2">Exploring the Web<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>If you go to a wikipedia page and go to developer tools, you can read the same text as there is on the page when you go deep enough. All of the elements you can see there are rectangular. However, you cannot see all of the elements.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-2-3">Page Structure<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>HTML documents have a tree-like structure. Sideways triangles are an html element.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-2-4">[ND] Focus Checkpoint<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>HTML and CSS are both “languages.” HTML controls the “structure” of a web page, while CSS controls the “style” of a page, or how it looks. When programmers talk about the “DOM” (Document Object Model) they are talking about the tree-like structure. of an HTML page.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-2-5">HTML-CSS-DOM<a href="#" class="right">Back to Top &circ;</a></h3>
+    <ul>
+      <li>HTML = language-syntax+rules</li>
+      <li>HTML/DOM = tag-elements in a tree</li>
+      <li>CSS = use syntax + rules to change how elements look on a page(font size, color, background)</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-2-6">Boxes Everywhere<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>Everything in a web page is made of rectangles, or boxes. When you have circles and you un-check border radius, the circles become squares. This is because border radius rounds the corners of the rectangles so much that they become circles.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-2-7">	Boxes, Grids, and Rules<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>Thinking of objects on a web page as boxes makes things a lot easier. If we use boxes, we can easily rearrange them to give users a different experience.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-2-8">[ND] How to Listen to Experts<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>Experts will:</p>
+    <ul>
+      <li>assume you have knowledge that you don't</li>
+      <li>use jargon you don't understand</li>
+      <li>speak too quickly for you to understand</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-2-9">Interview With Jacques<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>An easy way to approach a new design is to trace all of the boxes with a pencil on paper.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-2-10">Boxes to HTML<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>How to make a box into html:</p>
+    <ul>
+      <li>define boxes with div tags</li>
+      <li>to apply style, we need to label each element, or give each element a class attribute</li>
+      <li>elements can have multiple classes</li>
+      <li>make sure you give class names that make sense</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-2-11">Summary<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>We can make basic web pages in HTML and then add style to them by using CSS. Since everything on a web page is a box, we can make the basic structure and still easily move the boxes around.</p>
+  </div>
+</div>
+
+<div class="lesson">
+  <h2 id="lesson-3">Lesson 3: Adding CSS Style and HTML Structure<a href="#" class="right">Back to Top &circ;</a></h2>
+
+  <div class="topic">
+    <h3 id="lesson-3-1">Where to Focus Your Attention<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>Don't repeat yourself in CSS.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-3-2">Understanding CSS<a href="#" class="right">Back to Top &circ;</a></h3>
+    <p>CSS stands for "Cascading Style Sheets." You can have multiple CSS files or sheets that will be referenced in HTML. All of these will then be used to find the final and visible style for your page. </p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-3-3">[ND] Thinking About Cascading<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <ul>
+      <li>Inheritance is a key feature in CSS</li>
+      <li>Inheritance relies on the ancestor-descendant relationship to operate</li>
+      <li>Inheritance - the mechanism by which properties are applied not only to a specific element, but also to its descendants</li>
+      <li>box-related properties are not inherited</li>
+      <li>properties that can be inherited: color, font, letter-spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space, and word-spacing</li>
+      <li>properties that can’t be inherited: background, border, display, float and clear, height and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align, and z-index</li>
+      <li>Inheritance prevents repetition in a style sheet, so it is easier to write/</li>
+      <li>inheritance enhances faster-loading of web pages by users and enables the clients to save bandwidth and development costs</li>
+      <li>descendant elements inherit text-related properties</li>
+      <li>descendant elements may inherit CSS property values from any ancestor element enclosing them</li>
+      <li>inheritance relies on the document tree, which is the hierarchy of (X)HTML elements in a page based on nesting</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-3-4">Styling Up<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <ul>
+      <li>in CSS, you first write a selector, which defines what elements of a page a particular style will apply to</li>
+      <li>you can select an HTML tag, and that rule will apply to all tags on the page</li>
+      <li>to apply a style to all paragraphs on a page you can write:
+        <pre>p {<br>
+          }</pre>
+      <li>or, select elements by class:
+      <br> ex.(apply style to class description)
+      <pre>
+        .description<br>
+        {color: red;(attribute: value;)<br>
+        }</pre></li>
+      <li>or, combine selectors(ex.select all links inside an element with class article)</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-3-5">[ND] CSS Summary and Reference<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <h4 id="lesson-3-5-1">What is CSS?<a href="#" class="right">Back to Top &circ;</a></h4>
+    <p>CSS is code written to make HTML elements look different.</p>
+
+    <h4 id="lesson-3-5-2">How Does CSS "Control" HTML?<a href="#" class="right">Back to Top &circ;</a></h4>
+    <p>CSS controls how HTML elements look. For example: If you want to write CSS that makes all h3 elements have a red background and a font size of 20 pixels, you would write:</p>
+
+    <pre>
+      h3 {
+      background-color: red;
+      font-size: 20px;
+      }
+    </pre>
+    <p>In this example, the h3 is a selector. In other words, it tells the browser,"Apply the following rules to all of the h3 elements."</p>
+    <p>After the h3 there is a left flower bracket ({) and at the bottom there is a matching right flower bracket (}). Everything between these flower brackets is a rule that the browser will read and follow. </p>
+    <p>The line of code that says background-color : red; is a declaration. background-color is a property and in this case, red is the value of that property.</p>
+
+    <h4 id="lesson-3-5-3">CSS Vocabulary<a href="#" class="right">Back to Top &circ;</a></h4>
+    <ul>
+      <li>CSS = Cascading Style Sheets</li>
+      <li>Style: this word can refer to many things, such as:
+      <li>The HTML element. For example: &lt;style&gt;div {color: blue;}&lt;/style&gt;</li>
+      <li>The HTML attribute. For example:&lt;div style="color : blue"&gt;this text would be blue&lt;/div&gt;</li>
+      <li>the overall look of a web page</li>
+      <li>a verb: to style, meaning, to make something look different</li>
+      <li>rule - a line of CSS code that describes the value that a specific attribute should have</li>
+      <li>property - what you want to change</li>
+      <li>value - the value that you want a certain attribute to have</li>
+      <li>selector - the name that is used to target the elements assigned to a specific class or id attribute in the HTML</li>
+      <li>class - a class refers to a certain group of elements that can be styled together. Class names cannot contain any periods or any other types of punctuation marks</li>
+      <li>id's - an id is an unique way to identify elements in HTML</li>
+    </ul>
+
+    <h4 id="lesson-3-5-4">Selecting by Class<a href="#" class="right">Back to Top &circ;</a></h4>
+    <p>In the previous example, we set the font-size of every h3 to 20px. If we only want to add this style to a <em>few</em> of the h3's, we have to use <em>class selectors</em>. To do this, we can add the same class to each of these specific h3's using the div tag. For example: Say we wanted to make the font size of the h3's "Hello" and "Goodbye" 20 pixels. We could write:</p>
+    <pre>
+      &lt;div class="three"&gt;Hello&lt;/div&gt;
+      &lt;div class="three"&gt;Goodbye&lt;/div&gt;
+
+      &lt;style&gt;
+      .three {
+        font-size: 20px;
+      }
+      &lt;/style&gt;
+    </pre>
+
+    <p>We can also apply different rules to certain bits of text. For example: Say we wanted to make the background-color of the h3 "Hello" red, and the background-color of the h3 "Goodbye" blue. We could write:</p>
+    <pre>
+      &lt;div class="1"&gt;Hello&lt;/div&gt;
+      &lt;div class="2"&gt;Goodbye&lt;/div&gt;
+
+      &lt;style&gt;
+      .1 {
+        background-color: red;
+      }
+      .2 {
+        Background-color: blue;
+      }
+      &lt;/style&gt;
+    </pre>
+
+    <p>In both of these examples, we refer to an HTML element's class-name as .class-name to add style to it.</p>
+
+    <h4 id="lesson-3-5-5">How Do I Include CSS Styling in My Web Page? <a href="#" class="right">Back to Top &circ;</a></h4>
+    <p>There are three ways in which you can include CSS styling in your web page.</p>
+    <p>The first way is to write CSS in the &lt;head&gt; of your HTML. This method is great for really small projects. To do this:</p>
+    <ol>
+      <li>Add a head element at the top of your HTML document</li>
+      <li>Add a style element inside the head element</li>
+      <li>Write your CSS inside the style element and put your HTML in the body below</li>
+    </ol>
+
+    <p>For example, we could write:</p>
+
+    <pre>
+      &lt;head&gt;
+        &lt;style&gt;
+          div {
+            background-color: red;
+          }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;div&gt;
+          hello
+        &lt;/div&gt;
+      &lt;/body&gt;
+    </pre>
+
+    <p>The second way is to link your HTML to a separate CSS file. This adds another step, but it lets you stay more organized when working on larger projects. To do this:</p>
+    <ol>
+      <li>Write all of your structural HTML in one file which we can call main.html</li>
+      <li>Put all of your CSS code in a separate file which we can call main.css</li>
+      <li>Add a &lt;head&gt; element to the top of your HTML</li>
+      <li>Add a link to your CSS file in the head</li>
+      <li>Add the following attributes to the link: rel="stylesheets", type="text/css", href="main.css"</li>
+    </ol>
+
+    <p>The third way to add CSS styling to your page is to write it inline with your HTML. Usually this is a bad idea since you have to repeat lots of code. However, it is a good idea to be familiar with this method since you may see code that uses it. Using this method, you modify the style attributes of each individual HTML element. For example: Say we want to make the word "hello" have a background-color of turquoise. We could write:</p>
+    <pre>
+      &lt;div style="background-color: turquoise;"&gt;
+        hello
+      &lt;/div&gt;
+    </pre>
+
+    <p>We can also give bits of text different colors. For example: if we want the word "hello" to have a background-color of red and the word "goodbye" to have a background-color of blue, we could write:</p>
+    <pre>
+      &lt;div style="background-color: red;"&gt;
+        hello
+      &lt;/div&gt;
+      &lt;div style="background-color: blue;"&gt;
+        goodbye
+      &lt;/div&gt;
+    </pre>
+    <p>Note: you can make many mistakes with all of these methods. For example, method two will not work if you have the main.css and main.html files in separate folders.</p>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-3-6">Using Semantic Tags<a href="#" class="right">Back to Top &circ;</a></h3>
+    <ul>
+      <li>Changing the visual properties of an element only changes how the element is displayed, not what kind of element it is</li>
+      <li>you should choose the right type of element for a certain part of a page depending on the purpose of that element</li>
+      <li>you can have multiple headings in HTML(h1, h2, h3, etc.)</li>
+      <li>search engines also use headings to index the structure and content of a web page
+      </li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-3-7">The Box Revisited<a href="#" class="right">Back to Top &circ;</a></h3>
+    <ul>
+      <li>the box model:
+        <ul><li>margin</li>
+          <li>border</li>
+          <li>padding</li>
+          <li>content</li>
+          <li>padding</li>
+          <li>border</li>
+          <li>margin</li>
+        </ul>
+
+      <li>we can change the heights and widths of these boxes</li>
+      <li>the size of the element is the sum of the widths of the border, padding, and content</li>
+      <li>to see the size of a box, we can type:
+        <pre>
+          * {
+            box-sizing: border-box;
+          }
+        </pre>
+      </li>
+      <li>we can set the box size in either pixels or percentage</li>
+      <li>we can set a max width for the box</li>
+      <li>when you add the border-box definition and the max-width attributes, the box sizes are different, but the layout stays the same</li>
+      <li>flex box layout: flex box means flexible box and it provides an efficient way to lay out, align, and distribute space among items in a container, or, div</li>
+      <li>if you want several elements next to each other, you can change the display attribute of the parent container to value flex</li>
+      <li>
+        <ul>
+          <li>for this to work, you must give the items a size that is smaller than the default 100%</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-3-8">[ND] Box Sizing and Positioning<a href="#" class="right">Back to Top &circ;</a></h3>
+
+    <h4 id="lesson-3-8-1">Summary:<a href="#" class="right">Back to Top &circ;</a></h4>
+    <h5 id="lesson-3-8-1-1">Box Sizing<a href="#" class="right">Back to Top &circ;</a></h5>
+    <p>There are four main points about box sizing:</p>
+    <ol>
+      <li>HTML elements are boxes and each box has 4 components</li>
+      <li>Because there are so many components to each box, it can often be hard to get the size of a box just right</li>
+      <li>There are two techniques you can use to help deal with sizing issues:
+        <ol>
+          <li>Set sizes in terms of percentages rather than pixels</li>
+          <li>Set the box-sizing attribute to border-box for all of the elements</li>
+        </ol>
+      </li>
+      <li>Different browsers work slightly differently which sometimes causes them to display the same code in different ways</li>
+    </ol>
+    <h5 id="lesson-3-8-1-2">Box Positioning<a href="#" class="right">Back to Top &circ;</a></h5>
+    <ol>
+      <li>Divs are block elements (as opposed to inline), so by default they take up the entire width of a page</li>
+      <li>Adding the rule display: flex; to the appropriate CSS will override this behavior and let divs appear next to each other</li>
+    </ol>
+  </div>
+
+  <div class="topic">
+    <h3 id="lesson-3-9">Code, Test, Refine<a href="#" class="right">Back to Top &circ;</a></h3>
+    <ol>
+      <li>Look for natural boxes</li>
+      <li>Look for repeated styles and semantic elements</li>
+      <li>Write your HTML</li>
+      <li>Apply your styles</li>
+      <li>Fix the small things</li>
+      <li>Using developer tools, you can test things easily and see how the changes affect your page without actually changing the HTMl and CSS files</li>
+    </ol>
+  </div>
+</div>
+
+<div class="lesson">
+  <h2 id="resources">Resources Used:<a href="#" class="right">Back to Top &circ;</a></h2>
+  <div class="topic">
+    <h3>Images:</h3>
+    <p><a href="http://www.fancyicons.com/free-icons/220/foods/png/256/ice_cream_256.png">ice cream</a></p>
+    <p><a href="https://lh3.googleusercontent.com/--c8480byC9k/AAAAAAAAAAI/AAAAAAAAAJo/SP9LwTne7mA/s46-c-k-no/photo.jpg">notes</a></p>
+    <h3>Websites:</h3>
+    <p><a href="https://www.udacity.com">udacity</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#Inheritance">wikipedia</a></p>
+  </div>
+</div>
+<p>
+  <a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+         src="http://jigsaw.w3.org/css-validator/images/vcss"
+         alt="Valid CSS!" />
+  </a>
+</p>
+</body>
+</html>

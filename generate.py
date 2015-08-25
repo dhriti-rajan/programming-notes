@@ -38,17 +38,72 @@ def extract_title(text):
     return text[start:end]
 
 
+def generate_subtopic(subtopic):
+    output = ''
+    output += '<div class="subtopic">'
+
+    end = subtopic.find('\n')
+    title = subtopic[:end]
+    output += '<h4 class="topic">' + title
+    output += '<a href="#" class="right">Back to Top &circ;</a></h4>\n'
+
+    output += '<div class="content">' + subtopic[end:] + '</div>'
+    output += '</div>\n'
+
+    return output
+
+
+def generate_topic(topic):
+    output = ''
+    output += '<div class="topic">'
+
+    end = topic.find('\n')
+    title = topic[:end]
+    output += '<h3 class="topic">' + title
+    output += '<a href="#" class="right">Back to Top &circ;</a></h3>\n'
+
+    subtopics = topic.split('\nSUBTOPIC: ')
+    for subtopic in subtopics[1:]:
+        output += generate_subtopic(subtopic)
+        generate_subtopic(subtopic)
+
+    output += '</div>\n'
+    return output
+
+
+def generate_lesson(lesson):
+    start = lesson.find('Lesson: ') + 8
+    end = lesson.find('\n', start)
+    title = lesson[start:end]
+
+    output = ''
+    output += '<div class="lesson">\n'
+    output += '<h2 class="lesson">' + title
+    output += '<a href="#" class="right">Back to Top &circ;</a></h2>\n'
+
+    topics = lesson.split('\nTOPIC: ')
+    for topic in topics[1:]:
+        output += generate_topic(topic)
+
+    output += '</div>\n'
+    return output
+
+
 def generate_all(input):
-   lessons = input.split('LESSON: ')
-   title = extract_title(lessons[0])
-   all = ''
-   header = generate_header(title)
-   all += header
+    lessons = input.split('LESSON: ')
+    title = extract_title(lessons[0])
 
-   footer = generate_footer()
-   all += footer
+    output = ''
+    header = generate_header(title)
+    output += header
 
-   return all
+    for lesson in lessons[1:]:
+        output += generate_lesson(lesson)
+
+    footer = generate_footer()
+    output += footer
+
+    return output
 
 
 def generate_concept_HTML(concept_title, concept_description):
@@ -1902,5 +1957,4 @@ SUBTOPIC: Where Does Webbrowser Come From?
 </ul>
 """
 
-# print generate_all_html(TEST_TEXT)
 print generate_all(TEST_TEXT)

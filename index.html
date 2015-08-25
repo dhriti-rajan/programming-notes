@@ -1,590 +1,1889 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Programming Notes</title>
+  <title>Udacity Programming Notes</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<h1 class="title">Programming Notes
+<h1 class="title">Udacity Programming Notes
   <img src="https://lh3.googleusercontent.com/--c8480byC9k/AAAAAAAAAAI/AAAAAAAAAJo/SP9LwTne7mA/s46-c-k-no/photo.jpg"
        alt="notes">
 </h1>
-
-
-<div class="toc">
-  <h1 class="toc">Table of Contents</h1>
-  <ol>
-    <li>
-      <a href="#lesson-1">Lesson 1: The Basics of the Web and HTML</a>
-      <ul>
-        <li><a href="#lesson-1-1">Introduction to the Web</a></li>
-        <li><a href="#lesson-1-2">World-Wide Web</a></li>
-        <li><a href="#lesson-1-3">Components of the Web</a></li>
-        <li><a href="#lesson-1-4">HTML Basics</a></li>
-        <li><a href="#lesson-1-5">HTML Tags</a></li>
-        <li><a href="#lesson-1-6">HTML Tag Demos</a></li>
-        <li><a href="#lesson-1-7">HTML Document Structure</a></li>
-        <li><a href="#lesson-1-8">Why Computers Are Stupid</a></li>
-        <li><a href="#lesson-1-9">End Summary</a></li>
-      </ul>
-      <br>
-    </li>
-
-    <li>
-      <a href="#lesson-2">Lesson 2: Creating a Structured Document With HTML</a>
-      <ul>
-        <li><a href="#lesson-2-1">The First Step</a></li>
-        <li><a href="#lesson-2-2">Exploring the Web</a></li>
-        <li><a href="#lesson-2-3">Page Structure</a></li>
-        <li><a href="#lesson-2-4">[ND] Focus Checkpoint</a></li>
-        <li><a href="#lesson-2-5">HTML-CSS-DOM</a></li>
-        <li><a href="#lesson-2-6">Boxes Everywhere</a></li>
-        <li><a href="#lesson-2-7">Boxes, Grids, and Rules</a></li>
-        <li><a href="#lesson-2-8">[ND] How to Listen to Experts</a></li>
-        <li><a href="#lesson-2-9">Interview With Jacques</a></li>
-        <li><a href="#lesson-2-10">Boxes to HTML</a></li>
-        <li><a href="#lesson-2-11">Summary</a></li>
-      </ul>
-      <br>
-    </li>
-
-    <li>
-      <a href="#lesson-3">Lesson 3: Adding CSS Style and HTML Structure</a>
-      <ul>
-        <li><a href="#lesson-3-1">Where to Focus Your Attention</a></li>
-        <li><a href="#lesson-3-2">Understanding CSS</a></li>
-        <li><a href="#lesson-3-3">[ND] Thinking About Cascading</a></li>
-        <li><a href="#lesson-3-4">Styling Up</a></li>
-        <li><a href="#lesson-3-5">[ND] CSS Summary and Reference</a>
-          <ul>
-            <li><a href="#lesson-3-5-1">What is CSS</a></li>
-            <li><a href="#lesson-3-5-2">How Does CSS "Control" HTML?</a></li>
-            <li><a href="#lesson-3-5-3">CSS Vocabulary</a></li>
-            <li><a href="#lesson-3-5-4">Selecting by Class</a></li>
-            <li><a href="#lesson-3-5-5">How Do I Include CSS Styling in My Web Page?</a></li>
-          </ul>
-        </li>
-        <li><a href="#lesson-3-6">Using Semantic Tags</a></li>
-        <li><a href="#lesson-3-7">The Box Revisited</a></li>
-        <li>
-          <a href="#lesson-3-8">[ND] Box Sizing and Positioning</a>
-          <ul>
-            <li><a href="#lesson-3-8-1">Summary</a>
-              <ul>
-                <li><a href="#lesson-3-8-1-1">Box Sizing</a></li>
-                <li><a href="#lesson-3-8-1-2">Box Positioning</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#lesson-3-9">Code, Test, Refine</a></li>
-      </ul>
-      <br>
-    </li>
-    <li>
-
-    </li>
-    <li><a href="#resources">Resources</a>
-  </ol>
-</div>
-
 <div class="lesson">
-  <h2 id="lesson-1">Lesson 1: The Basics of the Web and HTML<a href="#" class="right">Back to Top &circ;</a></h2>
-
-  <div class="topic">
-    <h3 id="lesson-1-1">Introduction to the Web<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>HTML is the main document type of the web. The web runs on HTTP, which is the protocol that unites it.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-1-2">World-wide Web:<a href="#" class="right">Back to Top &circ;</a></h3>
-
-    <p>The World-wide web is a collection of HTML documents, or, documents made of HTML(HyperText Markup Language), and was invented in the 1990's. HTML documents are the basis for almost every web page. These documents are accessed by URL's. A URL looks
-      something like this:
-      <br>
-
-      <br> http://www.fancyicons.com/free-icons/220/foods/png/256/ice_cream_256.png
-      <br>
-
-      <br> It refers to a certain document on the web. When a person goes to a certain web page, their computer sends a HTTP Request to a server. The server then sends back the corresponding HTML document where it is displayed on the screen by a web browser(chrome,
-      safari, firefox, etc.)</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-1-3">Components of the Web:<a href="#" class="right">Back to Top &circ;</a></h3>
-
-    <p>The only things that the web needs to run are you, your computer running a browser, the internet, and servers. Servers are also computers, except they host files, rather than browsing them.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-1-4">HTML Basics<a href="#" class="right">Back to Top &circ;</a></h3>
-
-    <p>HTML is made up of multiple things. One of them is <em>text content</em>. Text content is what you see on a HTML document. Another component that makes up HTML is <em>markup</em>. Markup is what the text content <em>looks</em> like. HTML is also made up of references to other documents. These can be images, videos, or many other things. The last thing that HTML is made of is links to other pages.</p>
-
-    <p>If you type plain text in HTML, it ends up looking like plain text. To make text look different, we need to use markup.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-1-5">HTML Tags<a href="#" class="right">Back to Top &circ;</a></h3>
-
-    <p>Markup is made of things called tags, which make text look different. Tags have one main structure. Unless the tag is a void tag, the opening tag comes first, followed by the contents, and ended with the closing tag. A void tag has does not have a
-      closing tag, and therefore does not need content. As a result, void tags are composed only of opening tags.</p>
-
-    <p>There are multiple types of tags. Some of them are the bold&lt;b&gt;, italic;&lt;em&gt;, span&lt;span&gt;, div&lt;div&gt;, break&lt;br&gt;, paragraph&lt;p&gt;, anchor&lt;a&gt;, and image&lt;img&gt; tags. Of all of these tags, the only void tag is
-      the break tag. Some of these tags have the same function, but do this in different ways. For example, the break tag and the paragraph tag both put text on multiple lines. However, they are different because they are different types of tags. The
-      break tag is an <em>inline</em> tag, whereas the paragraph tag is a <em>block</em> tag. Inline tags are only text, but block tags make an imaginary box around the text. This box can have a certain height or width.</p>
-
-    <p>Text ends up in one long line unless you use either the break tag, or the paragraph tag. We can use something called <em>whitespace</em> to make text appear on seperate lines. This is just using the break or paragraph tag multiple times.</p>
-
-    <p>Tags can have multiple attributes. Attributes are extra bits of information. They are used to define the characteristics of an HTML element and are placed in the opening tag.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-1-6">HTML Tag Demos<a href="#" class="right">Back to Top &circ;</a></h3>
-
-    <div class="text">
-      <ul>
-        <li>Bold Tag: (makes content bold):  <b>Dhriti</b>.
-          <pre>&lt;b&gt;Dhriti&lt;b&gt;</pre>
-        </li>
-        <li>Italic Tag: (makes content italic: )<em>Dhriti</em>
-          <pre>&lt;em&gt;Dhriti&lt;em&gt;</pre>
-        </li>
-        <li>Anchor Tag:(makes content a link(inline))<a href="https://udacity.com">Udacity</a>
-          <pre>&lt;a href="Udacity.com"&gt;Udacity&lt;/a&gt;</pre>
-        </li>
-        <li>Image Tag: (makes URL an image(inline))
-          <pre>&lt;img src="http://www.fancyicons.com/free-icons/220/foods/png/256/ice_cream_256.png" alt="Ice Cream"&gt;</pre>
-          <br>
-          <img src="http://www.fancyicons.com/free-icons/220/foods/png/256/ice_cream_256.png" alt="Ice Cream"><br>
-        </li>
-        <li>Break Tag: (puts text on different lines(inline))
-          <pre>&lt;br&gt;Ice&lt;br&gt;Cream</pre>
-          <br>Ice
-          <br>Cream
-        </li>
-        <li>Paragraph Tag: (puts content in a paragraph(block))
-          <pre>&lt;p&gt;Ice&lt;/p&gt;&lt;p&gt;Cream&lt;/p&gt;</pre>
-          <br>
-          <p>Ice</p>
-          <p>Cream</p>
-        </li>
-        <li>Span Tag:(contains content(inline))
-          <pre>&lt;span class=”foo”&gt;Dhriti&lt;/span&gt;</pre>
-          <span class=”foo”>Dhriti</span>
-        </li>
-        <li>Div Tag: (contains content(block))
-          <pre>&lt;div class=”word”&gt;Dhriti&lt;/div&gt;</pre>
-          <div class=”word”>Dhriti</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-1-7">HTML Document Structure<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>A simple HTML document:</p>
-    <pre>
-      &lt;html&gt;
-      &lt;head&gt;
-      &lt;title&gt;Title!&lt;/title&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-      &lt;b&gt;content&lt;b&gt;
-      &lt;/body&gt;
-      &lt;/html&gt;
-    </pre>
-    <p>The head contains metadata, Javascript, or CSS(filing). The body has the content of the document. Here is a simplified view of the HTML Document:</p>
-    <pre>
-      &lt;head&gt;
-      Title(CSS, Javascript)
-      &lt;/head&gt;
-      &lt;body&gt;
-      contents
-      &lt;/body&gt;
-    </pre>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-1-8">Why Computers Are Stupid<a href="#" class="right">Back to Top &circ;</a></h3>
-
-    <p>Some programmers describe computers as "stupid". Usually, what they mean is that computers are very sensitive to typos and small mistakes, whereas humans can still understand it. Because they are so sensitive, what we consider "small mistakes" could lead to big problems in programming. For example, if you forget to put an end tag but remember the opening tag, the computer applies the function of the opening tag to all the text following it instead of the text section you meant to apply it to.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-1-9">End Summary<a href="#" class="right">Back to Top &circ;</a></h3>
-
+<h2 class="lesson">1: The Basics of the Web and HTML<a href="#" class="right">Back to Top &circ;</a></h2>
+<div class="topic"><h3 class="topic">1.1 The Basics of the Web and HTML<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">Introduction to the Web<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+Topics covered:
+<ul>
+    <li>the web (what it is, what it looks like, how its major pieces fit together)
+    </li>
+    <li>HTML (main document type of the web)
+    </li>
+    <li>URL's (how you refer to documents on the web)
+    </li>
+    <li>HTTP (the protocol that unites the web/that the web runs on)
+    </li>
+    <li>web applications (what they are, how they fit into this big picture, grand finale, what the course is about)
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">World-wide Web<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+World-wide Web:
+<ul>
+    <li>a collection of HTML documents
+    </li>
+    <li>these documents made of HTML (HyperText Markup Language)
+    </li>
+    <li>basis for almost every web page
+    </li>
+    <li>HTML = glues everything together
+    </li>
+    <li>World-wide web = invented in early 1990's
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Components of the Web<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>you
+    </li>
+    <li>your computer running a browser
+    </li>
+    <li>internet
+    </li>
+    <li>servers (computers for sitting in a closet hosting files that make up the web rather than sitting on your desk browsing these files)
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">HTML Basics<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+HTML is made up of:
+<ul>
+    <li>text content (what you see)
+    </li>
+    <li>markup (what it looks like)
+    </li>
+    <li>references to other documents (images, videos, etc.)
+    </li>
+    <li>links to other pages
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">HTML Playground<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>plain text = plain text in HTML for the most part
+    </li>
+    <li>to make text use different, we need to use markup
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">HTML Tags<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+HTML Markup
+<ul>
+    <li>made up of things called tags
+    </li>
+    <li>example of tag: &lt;name&gt;contents&lt;/name&gt;
+    </li>
     <ul>
-      <li>two main topics = overview of internet, introduction to HTML</li>
-      <li>overview of internet:big-picture view of how the internet works/servers, browsers, internet, HTTP</li>
-      <li>introduction to HTML: HTML tags (b, p, em). even though these tags aren't visible to users of a web page, they still carry meaning that is meaningful to web browsers</li>
-      <li>(What a Web Page Is)a web page is a text document written in a language called HTML. Web browsers read these documents, and then interpret and display them (How Coding Works)coding happens when programmers write text in a language that a computer
-        can understand so that computer can then follow the instructions the programmer wrote</li>
-      <li>(Computers Are Stupid)programmers need to write exactly the way a computer understands (also known as writing with correct "syntax")</li>
-      <li>(Basic HTML Vocabulary):</li>
-      <li>Tag: An HTML tag is always contained within angled brackets. Most tags have an opening tag (p for example) and a closing tag, (/p). Some tags (called "void" tags) do not require a closing tag (like the br tag).</li>
-      <li>Element: An HTML element refers to everything within a set of opening and closing tags.</li>
-      <li>Attribute: This is a property of an HTML element. For example, to set the href attribute of an anchor tag to the Udacity URL, you would write(a href="www.udacity.com")</li>
-      <li>container elements: elements that do nothing other than contain content inside of them. Two examples of tags which are container elements are span and div.</li>
+        <li>&lt;name&gt; = opening tag
+        </li>
+        <li>&lt;/name&gt; = closing tag
+        </li>
     </ul>
-  </div>
+    <li>structure of tag:
+    </li>
+    <ul>
+        <li>&lt;tag name&gt;tag contents&lt;/tag name&gt;
+        </li>
+        <li>whole tag = element
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Bold Tag<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>structure of bold tag:
+    </li>
+    <ul>
+        <li>&lt;b&gt;contents&lt;/b&gt;
+        </li>
+        <li>b = bold
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Italics<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>structure of italic tag = same as bold tag
+    </li>
+    <ul>
+        <li>em = emphasis
+        </li>
+        <li>&lt;em&gt;contents&lt;/em&gt;
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">[ND] Computers Are Stupid<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>when programmers say that computers are stupid, they are usually addressing an important point about how computers understand the instructions that human programmers give them
+    </li>
+    <li>think about how sensitive computers are to typos and how small mistakes (mistakes that a "smart" human could easily correct) can lead to huge problems when given to a "stupid" computer.
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Missing End Tag<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>if an end tag is missing, the command applies to everything after the opening tag
+    </li>
+    <li>example:
+    </li>
+    <ul>
+        <li>(correct) Dhriti&lt;em&gt;loves&lt;/em&gt; mysore pak = Dhriti <em>loves</em> mysore pak
+        </li>
+        <li>(incorrect) Dhriti&lt;em&gt;loves mysore pak = Dhriti <em>loves mysore pak</em>
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">[ND] Scratchpad Warning<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>learn how to connect the HTML documents you write to any other document on the internet by adding links
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Making Links<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>HTML Attributes
+    </li>
+    <li>example:
+    </li>
+    <ul>
+        <li>&lt;tag attr="value"&gt;contents&lt;/tag&gt;
+        </li>
+    </ul>
+    <li>similarities:opening tag, end tag, content
+    </li>
+    <li>differences:attribute
+    </li>
+    <li>tags can have multiple attributes
+    </li>
+    <li>example:
+    </li>
+    <ul>
+        <li>anchor tag, anchor = a
+        </li>
+        <li>&lt;a href="www.reddit.com"&gt;derp&lt;/a&gt;
+        </li>
+        <li>derp = content
+        </li>
+        <li>href = attribute name
+        </li>
+        <li>www.reddit.com = value
+        </li>
+        <li>anchor tag makes things links rather than normal text
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Adding Images<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>image tag structure:
+    </li>
+    <ul>
+        <li>&lt;img src="url" alt="text"&gt;
+        </li>
+        <li>image tag = void tag (no content, so no end tag necessary)
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Whitespace<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>if you enter text in multiple lines, it shows up as one long line unless you use the line break tag (void tag)
+    </li>
+    <li>example:
+    </li>
+    <ul>
+        <li>Dhriti &lt;br&gt;loves&lt;br&gt; mysore pak = Dhriti<br> loves<br> mysore pak
+        </li>
+    </ul>
+    <li>other option = paragraph tag
+    </li>
+    <li>structure = &lt;p&gt;content&lt;/p&gt;
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Inline vs Block<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>why do we have a break tag and a paragraph tag?
+    </li>
+    <li>break = inline (just text)
+    </li>
+    <li>paragraph = block (makes imaginary box with height and width)
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">[ND] Where to Focus<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>container elements - elements that do nothing but contain stuff inside themselves
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Span and Div<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>&lt;span&gt;content&lt;/span&gt;
+    </li>
+    <li>&lt;div&gt;content&lt;/div&gt;
+    </li>
+    <li>differences:
+    </li>
+    <ul>
+        <li>span = inline
+        </li>
+        <li>div = block
+        </li>
+    </ul>
+    <li>function:contain content
+    </li>
+    <li>possibilities:attach styles/adjust different behaviors of how they display
+    </li>
+    <li>examples:
+    </li>
+    <ul>
+        <li>&lt;span class="foo"&gt;content&lt;/span&gt;
+        </li>
+        <li>&lt;div class="bar"&gt;content&lt;/div&gt;
+        </li>
+    </ul>
+    <li>inline elements:
+    </li>
+    <ul>
+        <li>a, span, br, img, strong
+        </li>
+    </ul>
+    <li>block elements:
+    </li>
+    <ul>
+        <li>div, p, form
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Document Structure<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+                COMPLETE HTML DOCUMENT:
+                &lt;!DOCTYPE HTML&gt; - doctype
+                - &lt;html&gt;
+                -- &lt;head&gt;
+                &lt;title&gt;Title!&lt;/title&gt; - title
+- &lt;/head&gt;
+--- &lt;body&gt;
+&lt;b&gt;content&lt;/b&gt;
+--- &lt;/body&gt;
+- &lt;/html&gt;
+<ul>
+    <li>head contains metadata, Javascript, CSS (filing)
+    </li>
+    <li>body = content of document
+    </li>
+                HTML Document (different view)
+                red = focus
+                &lt;head&gt;
+                title CSS JS
+                &lt;/head&gt;
+                &lt;body&gt;
+                contents
+                &lt;/body&gt;
+    <li>we will focus on generating the body section of an HTML document
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">[ND] Think About What You've Learned<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>two main topics = overview of internet, introduction to HTML
+    </li>
+    <li>overview of internet:big-picture view of how the internet works/servers, browsers, internet, HTTP
+    </li>
+    <li>introduction to HTML: HTML (tags&lt;b&gt;, &lt;p&gt;, &lt;em&gt;) even though these tags aren't visible to users of a web page, they still carry meaning that is meaningful to web browsers
+    </li>
+    <li>(What a Web Page Is) a web page is a text document written in a language called HTML. Web browsers read these documents, and then interpret and display them
+    </li>
+    <li>(How Coding Works) coding happens when programmers write text in a language that a computer can understand so that computer can then follow the instructions the programmer wrote
+    </li>
+    <li>(Computers Are Stupid) programmers need to write exactly the way a computer understands (also known as writing with correct "syntax")
+    </li>
+    <li>(Basic HTML Vocabulary):
+    </li>
+    <ul>
+        <li>Tag: An HTML tag is always contained within angled brackets. Most tags have an opening tag (&lt;p&gt; for example) and a closing tag, (&lt;/p&gt;). Some tags (called "void" tags) do not require a closing tag (like the &lt;br&gt; tag).
+        </li>
+        <li>Element: An HTML element refers to everything within a set of opening and closing tags.
+        </li>
+        <li>Attribute: This is a property of an HTML element. For example, to set the href attribute of an anchor tag to the Udacity URL, you would write&lt;a href="www.udacity.com"&gt;Udacity&lt;/a&gt;
+        </li>
+    </ul>
+</ul>
+</div></div>
 </div>
-
-<div class="lesson">
-  <h2 id="lesson-2">Lesson 2: Creating a Structured Document With HTML<a href="#" class="right">Back to Top &circ;</a></h2>
-
-  <div class="topic">
-    <h3 id="lesson-2-1">The First Step<a href="#" class="right">Back to Top &circ;</a></h3>
-
+<div class="topic"><h3 class="topic">1.2 Creating a Structured Document<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">The First Step<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>html = structure
+    </li>
+    <li>css = styling
+    </li>
+    <li>javascript = interactive components
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Exploring the Web<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>If you go to a wikipedia page and go to developer tools, you can read the same text as there is on the page when you go deep enough
+    </li>
+    <li>all of the elements you can see are rectangular
+    </li>
+    <li>you cannot see all of the elements
+    </li>
+Page Structure
+    <li>Sideways triangles are an html element
+    </li>
+    <li>tree-like structure
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">[ND] Focus Checkpoint<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>HTML and CSS are both "languages"
+    </li>
+    <li>HTML controls the "structure" of a web page
+    </li>
+    <li>CSS controls the "style" of a page (how it looks)
+    </li>
+    <li>When programmers talk about the "DOM" (Document Object Model) they are talking about the tree-like structure of a page
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">HTML-CSS-DOM<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>HTML = language-syntax+rules
+    </li>
+    <li>HTML/DOM = tag-elements in a tree
+    </li>
+    <li>CSS = use syntax + rules to change how elements look on a page (font size, color, background)
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Boxes Everywhere<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>everything in web pages is made of rectangles (a box)
+    </li>
+    <li>when you have circles and you uncheck border radius, the circles become squares
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Boxes, Grids, and Rules<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>Thinking of objects on a web page as boxes makes things a lot easier
+    </li>
+    <li>using boxes, we can easily rearrange them to give users a different experience
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">[ND] How to Listen to Experts<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>Experts will:
+    </li>
+    <li>assume you have knowledge that you don't
+    </li>
+    <li>use jargon you don't understand
+    </li>
+    <li>speak too quickly for you to understand
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Interview with Jacques<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>how to approach a new design
+    </li>
+    <li>make boxes by drawing with pencil
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Boxes to HTML<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>How to make a box into html:
+    </li>
     <ul>
-      <li>html = structure</li>
-      <li>css = styling</li>
-      <li>javascript = interactive components</li>
+        <li>define boxes with div tags
+        </li>
     </ul>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-2-2">Exploring the Web<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>If you go to a wikipedia page and go to developer tools, you can read the same text as there is on the page when you go deep enough. All of the elements you can see there are rectangular. However, you cannot see all of the elements.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-2-3">Page Structure<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>HTML documents have a tree-like structure. Sideways triangles are an html element.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-2-4">[ND] Focus Checkpoint<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>HTML and CSS are both “languages.” HTML controls the “structure” of a web page, while CSS controls the “style” of a page, or how it looks. When programmers talk about the “DOM” (Document Object Model) they are talking about the tree-like structure. of an HTML page.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-2-5">HTML-CSS-DOM<a href="#" class="right">Back to Top &circ;</a></h3>
+    <li>to apply style, we need to label each element, or give each element a class attribute
+    </li>
+    <li>elements can have multiple classes
+    </li>
+    <li>make sure you give class names that make sense
+    </li>
+Summaries:
+We can make basic web pages in HTML and then add style to them by using CSS.
+i.3 Adding CSS Style and HTML Structure
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Where to Focus Your Attention<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+Don't repeat yourself in CSS
+</div></div>
+<div class="subtopic"><h4 class="topic">Understanding CSS<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>CSS = Cascading Style Sheets
+    </li>
+    <li>You can have several CSS files or sheets that will be referenced in HTML and all of them will be used to find out the final and visible style for your page
+    </li>
+    <li>Cascading - the most specific rule (the rule that best describes the elements) is applied to every element
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">[ND] Thinking About "Cascading"<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>Inheritance is a key feature in CSS
+    </li>
+    <li>Inheritance relies on the ancestor-descendant relationship to operate
+    </li>
+    <li>Inheritance - the mechanism by which properties are applied not only to a specific element, but also to its descendants
+    </li>
+    <li>box-related properties are not inherited
+    </li>
+    <li>properties that can be inherited: color, font, letter-spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space, and word-spacing
+    </li>
+    <li>properties that can't be inherited: background, border, display, float and clear, height and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align, and z-index
+    </li>
+    <li>Inheritance prevents repetition in a style sheet, so it is easier to write
+    </li>
+    <li>inheritance enhances faster-loading of web pages by users and enables the clients to save bandwidth and development costs
+    </li>
+    <li>descendant elements inherit text-related properties
+    </li>
+    <li>descendant elements may inherit CSS property values from any ancestor element enclosing them
+    </li>
+    <li>inheritance relies on the document tree, which is the hierarchy of (X) HTML elements in a page based on nesting
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Styling Up<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>in CSS, you first write a selector, which defines what elements of a page a particular style will apply to
+    </li>
+    <li>you can select an HTML tag, and that rule will apply to all tags on the page
+    </li>
+    <li>to apply a style to all paragraphs on a page you can write:
+    </li>
     <ul>
-      <li>HTML = language-syntax+rules</li>
-      <li>HTML/DOM = tag-elements in a tree</li>
-      <li>CSS = use syntax + rules to change how elements look on a page(font size, color, background)</li>
+        <li>p {
+        </li>
+                                }
     </ul>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-2-6">Boxes Everywhere<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>Everything in a web page is made of rectangles, or boxes. When you have circles and you un-check border radius, the circles become squares. This is because border radius rounds the corners of the rectangles so much that they become circles.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-2-7">	Boxes, Grids, and Rules<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>Thinking of objects on a web page as boxes makes things a lot easier. If we use boxes, we can easily rearrange them to give users a different experience.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-2-8">[ND] How to Listen to Experts<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>Experts will:</p>
+    <li>or,
+    </li>
     <ul>
-      <li>assume you have knowledge that you don't</li>
-      <li>use jargon you don't understand</li>
-      <li>speak too quickly for you to understand</li>
+        <li>select elements by class
+        </li>
+        <li>ex. (apply style to class description)
+        </li>
+        <li>.description {
+        </li>
+                                color: red; (attribute: value;)
+                                }
     </ul>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-2-9">Interview With Jacques<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>An easy way to approach a new design is to trace all of the boxes with a pencil on paper.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-2-10">Boxes to HTML<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>How to make a box into html:</p>
+    <li>or,
+    </li>
     <ul>
-      <li>define boxes with div tags</li>
-      <li>to apply style, we need to label each element, or give each element a class attribute</li>
-      <li>elements can have multiple classes</li>
-      <li>make sure you give class names that make sense</li>
+        <li>combine selectors (ex.select all links inside an element with class article)
+        </li>
     </ul>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-2-11">Summary<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>We can make basic web pages in HTML and then add style to them by using CSS. Since everything on a web page is a box, we can make the basic structure and still easily move the boxes around.</p>
-  </div>
-</div>
-
-<div class="lesson">
-  <h2 id="lesson-3">Lesson 3: Adding CSS Style and HTML Structure<a href="#" class="right">Back to Top &circ;</a></h2>
-
-  <div class="topic">
-    <h3 id="lesson-3-1">Where to Focus Your Attention<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>Don't repeat yourself in CSS.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-3-2">Understanding CSS<a href="#" class="right">Back to Top &circ;</a></h3>
-    <p>CSS stands for "Cascading Style Sheets." You can have multiple CSS files or sheets that will be referenced in HTML. All of these will then be used to find the final and visible style for your page. </p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-3-3">[ND] Thinking About Cascading<a href="#" class="right">Back to Top &circ;</a></h3>
-
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Using Semantic Tags<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>Changing the visual properties of an element only changes how the element is displayed, not what kind of element it is
+    </li>
+    <li>you should choose the right type of element for a certain part of a page depending on the purpose of that element
+    </li>
+    <li>you can have multiple headings in HTML (h1, h2, h3, etc.)
+    </li>
+    <li>search engines also use headings to index the structure and content of a web page
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">The Box Revisited<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>the box model:
+    </li>
     <ul>
-      <li>Inheritance is a key feature in CSS</li>
-      <li>Inheritance relies on the ancestor-descendant relationship to operate</li>
-      <li>Inheritance - the mechanism by which properties are applied not only to a specific element, but also to its descendants</li>
-      <li>box-related properties are not inherited</li>
-      <li>properties that can be inherited: color, font, letter-spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space, and word-spacing</li>
-      <li>properties that can’t be inherited: background, border, display, float and clear, height and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align, and z-index</li>
-      <li>Inheritance prevents repetition in a style sheet, so it is easier to write/</li>
-      <li>inheritance enhances faster-loading of web pages by users and enables the clients to save bandwidth and development costs</li>
-      <li>descendant elements inherit text-related properties</li>
-      <li>descendant elements may inherit CSS property values from any ancestor element enclosing them</li>
-      <li>inheritance relies on the document tree, which is the hierarchy of (X)HTML elements in a page based on nesting</li>
+        <li>margin
+        </li>
+        <li>border
+        </li>
+        <li>padding
+        </li>
+        <li>content
+        </li>
+        <li>padding
+        </li>
+        <li>border
+        </li>
+        <li>margin
+        </li>
     </ul>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-3-4">Styling Up<a href="#" class="right">Back to Top &circ;</a></h3>
-
+    <li>we can change the heights and widths of these boxes
+    </li>
+    <li>the size of the element is the sum of the widths of the border, padding, and content
+    </li>
+    <li>to see size of box, type:
+    </li>
     <ul>
-      <li>in CSS, you first write a selector, which defines what elements of a page a particular style will apply to</li>
-      <li>you can select an HTML tag, and that rule will apply to all tags on the page</li>
-      <li>to apply a style to all paragraphs on a page you can write:
-        <pre>p {<br>
-          }</pre>
-      <li>or, select elements by class:
-      <br> ex.(apply style to class description)
-      <pre>
-        .description<br>
-        {color: red;(attribute: value;)<br>
-        }</pre></li>
-      <li>or, combine selectors(ex.select all links inside an element with class article)</li>
+        <li>*{
+        </li>
+                                        box-sizing: border-box;
+                                }
     </ul>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-3-5">[ND] CSS Summary and Reference<a href="#" class="right">Back to Top &circ;</a></h3>
-
-    <h4 id="lesson-3-5-1">What is CSS?<a href="#" class="right">Back to Top &circ;</a></h4>
-    <p>CSS is code written to make HTML elements look different.</p>
-
-    <h4 id="lesson-3-5-2">How Does CSS "Control" HTML?<a href="#" class="right">Back to Top &circ;</a></h4>
-    <p>CSS controls how HTML elements look. For example: If you want to write CSS that makes all h3 elements have a red background and a font size of 20 pixels, you would write:</p>
-
-    <pre>
-      h3 {
-      background-color: red;
-      font-size: 20px;
-      }
-    </pre>
-    <p>In this example, the h3 is a selector. In other words, it tells the browser,"Apply the following rules to all of the h3 elements."</p>
-    <p>After the h3 there is a left flower bracket ({) and at the bottom there is a matching right flower bracket (}). Everything between these flower brackets is a rule that the browser will read and follow. </p>
-    <p>The line of code that says background-color : red; is a declaration. background-color is a property and in this case, red is the value of that property.</p>
-
-    <h4 id="lesson-3-5-3">CSS Vocabulary<a href="#" class="right">Back to Top &circ;</a></h4>
+    <li>we can set the box size in either pixels or percentage
+    </li>
+    <li>we can set a max width for the box
+    </li>
+    <li>when you add the border-box definition and max-width attributes, the box sizes are different, but the layout stays the same
+    </li>
+    <li>flex box layout: flex box means flexible box and it provides an efficient way to lay out, align, and distribute space among items in a container, or, div
+    </li>
+    <li>if you want several elements next to each other, you can change the display attribute of the parent container to value flex
+    </li>
     <ul>
-      <li>CSS = Cascading Style Sheets</li>
-      <li>Style: this word can refer to many things, such as:
-      <li>The HTML element. For example: &lt;style&gt;div {color: blue;}&lt;/style&gt;</li>
-      <li>The HTML attribute. For example:&lt;div style="color : blue"&gt;this text would be blue&lt;/div&gt;</li>
-      <li>the overall look of a web page</li>
-      <li>a verb: to style, meaning, to make something look different</li>
-      <li>rule - a line of CSS code that describes the value that a specific attribute should have</li>
-      <li>property - what you want to change</li>
-      <li>value - the value that you want a certain attribute to have</li>
-      <li>selector - the name that is used to target the elements assigned to a specific class or id attribute in the HTML</li>
-      <li>class - a class refers to a certain group of elements that can be styled together. Class names cannot contain any periods or any other types of punctuation marks</li>
-      <li>id's - an id is an unique way to identify elements in HTML</li>
+        <li>for this to work, you must give the items a size that is smaller than the default 100%
+        </li>
     </ul>
-
-    <h4 id="lesson-3-5-4">Selecting by Class<a href="#" class="right">Back to Top &circ;</a></h4>
-    <p>In the previous example, we set the font-size of every h3 to 20px. If we only want to add this style to a <em>few</em> of the h3's, we have to use <em>class selectors</em>. To do this, we can add the same class to each of these specific h3's using the div tag. For example: Say we wanted to make the font size of the h3's "Hello" and "Goodbye" 20 pixels. We could write:</p>
-    <pre>
-      &lt;div class="three"&gt;Hello&lt;/div&gt;
-      &lt;div class="three"&gt;Goodbye&lt;/div&gt;
-
-      &lt;style&gt;
-      .three {
-        font-size: 20px;
-      }
-      &lt;/style&gt;
-    </pre>
-
-    <p>We can also apply different rules to certain bits of text. For example: Say we wanted to make the background-color of the h3 "Hello" red, and the background-color of the h3 "Goodbye" blue. We could write:</p>
-    <pre>
-      &lt;div class="1"&gt;Hello&lt;/div&gt;
-      &lt;div class="2"&gt;Goodbye&lt;/div&gt;
-
-      &lt;style&gt;
-      .1 {
-        background-color: red;
-      }
-      .2 {
-        Background-color: blue;
-      }
-      &lt;/style&gt;
-    </pre>
-
-    <p>In both of these examples, we refer to an HTML element's class-name as .class-name to add style to it.</p>
-
-    <h4 id="lesson-3-5-5">How Do I Include CSS Styling in My Web Page? <a href="#" class="right">Back to Top &circ;</a></h4>
-    <p>There are three ways in which you can include CSS styling in your web page.</p>
-    <p>The first way is to write CSS in the &lt;head&gt; of your HTML. This method is great for really small projects. To do this:</p>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">[ND] Box Sizing and Positioning Summary<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+Box Sizing
+There are four main points that Jessica addressed about box sizing.
+<ol>
+    <li>HTML elements are boxes and each box has 4 components.
+    </li>
+    <li>Because there are so many components to each box, it can often be hard to get the size of a box just right.
+    </li>
+    <li>There are two techniques you can use to help deal with sizing issues.
+    </li>
     <ol>
-      <li>Add a head element at the top of your HTML document</li>
-      <li>Add a style element inside the head element</li>
-      <li>Write your CSS inside the style element and put your HTML in the body below</li>
+        <li>Set sizes in terms of percentages rather than pixels.
+        </li>
+        <li>Set the box-sizing attribute to border-box for every element.
+        </li>
     </ol>
+    <li>Different browsers work slightly differently. Sometimes this causes different browsers to display the same code differently.
+    </li>
+</ol>
 
-    <p>For example, we could write:</p>
+Box Positioning
+<ol>
+    <li>Divs are block elements (as opposed to inline), so by default they take up the entire width of a page.
+    </li>
+    <li>Adding the rule display: flex; to the appropriate CSS will override this behavior and let divs appear next to each other.
+    </li>
+</ol>
+</div></div>
+<div class="subtopic"><h4 class="topic">Code, Test, Refine<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ol>
+    <li>Look for natural boxes
+    </li>
+    <li>Look for repeated styles and semantic elements
+    </li>
+    <li>write your HTML
+    </li>
+    <li>apply your styles
+    </li>
+    <li>fix the small things
+    </li>
+    <li>using developer tools, you can test things on the fly and see how it affects your page without changing the HTML and CSS files.
+    </li>
+</ol>
 
-    <pre>
-      &lt;head&gt;
-        &lt;style&gt;
-          div {
-            background-color: red;
-          }
-        &lt;/style&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-        &lt;div&gt;
-          hello
-        &lt;/div&gt;
-      &lt;/body&gt;
-    </pre>
-
-    <p>The second way is to link your HTML to a separate CSS file. This adds another step, but it lets you stay more organized when working on larger projects. To do this:</p>
-    <ol>
-      <li>Write all of your structural HTML in one file which we can call main.html</li>
-      <li>Put all of your CSS code in a separate file which we can call main.css</li>
-      <li>Add a &lt;head&gt; element to the top of your HTML</li>
-      <li>Add a link to your CSS file in the head</li>
-      <li>Add the following attributes to the link: rel="stylesheets", type="text/css", href="main.css"</li>
-    </ol>
-
-    <p>The third way to add CSS styling to your page is to write it inline with your HTML. Usually this is a bad idea since you have to repeat lots of code. However, it is a good idea to be familiar with this method since you may see code that uses it. Using this method, you modify the style attributes of each individual HTML element. For example: Say we want to make the word "hello" have a background-color of turquoise. We could write:</p>
-    <pre>
-      &lt;div style="background-color: turquoise;"&gt;
-        hello
-      &lt;/div&gt;
-    </pre>
-
-    <p>We can also give bits of text different colors. For example: if we want the word "hello" to have a background-color of red and the word "goodbye" to have a background-color of blue, we could write:</p>
-    <pre>
-      &lt;div style="background-color: red;"&gt;
-        hello
-      &lt;/div&gt;
-      &lt;div style="background-color: blue;"&gt;
-        goodbye
-      &lt;/div&gt;
-    </pre>
-    <p>Note: you can make many mistakes with all of these methods. For example, method two will not work if you have the main.css and main.html files in separate folders.</p>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-3-6">Using Semantic Tags<a href="#" class="right">Back to Top &circ;</a></h3>
+</div></div>
+</div>
+</div>
+<div class="lesson">
+<h2 class="lesson">2: Automate Your Page<a href="#" class="right">Back to Top &circ;</a></h2>
+<div class="topic"><h3 class="topic">2.1 Introduction to Serious Programing<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">Introduction<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>course will:
+    </li>
     <ul>
-      <li>Changing the visual properties of an element only changes how the element is displayed, not what kind of element it is</li>
-      <li>you should choose the right type of element for a certain part of a page depending on the purpose of that element</li>
-      <li>you can have multiple headings in HTML(h1, h2, h3, etc.)</li>
-      <li>search engines also use headings to index the structure and content of a web page
-      </li>
-    </ul>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-3-7">The Box Revisited<a href="#" class="right">Back to Top &circ;</a></h3>
-    <ul>
-      <li>the box model:
-        <ul><li>margin</li>
-          <li>border</li>
-          <li>padding</li>
-          <li>content</li>
-          <li>padding</li>
-          <li>border</li>
-          <li>margin</li>
-        </ul>
-
-      <li>we can change the heights and widths of these boxes</li>
-      <li>the size of the element is the sum of the widths of the border, padding, and content</li>
-      <li>to see the size of a box, we can type:
-        <pre>
-          * {
-            box-sizing: border-box;
-          }
-        </pre>
-      </li>
-      <li>we can set the box size in either pixels or percentage</li>
-      <li>we can set a max width for the box</li>
-      <li>when you add the border-box definition and the max-width attributes, the box sizes are different, but the layout stays the same</li>
-      <li>flex box layout: flex box means flexible box and it provides an efficient way to lay out, align, and distribute space among items in a container, or, div</li>
-      <li>if you want several elements next to each other, you can change the display attribute of the parent container to value flex</li>
-      <li>
+        <li>introduce you to fundamental ideas in computing
+        </li>
+        <li>teach you to read and write your own computer programs
+        </li>
+        <li>we will do this in the context of building a search engine (google, bing, etc.)
+        </li>
+        <li>search engine:
+        </li>
         <ul>
-          <li>for this to work, you must give the items a size that is smaller than the default 100%</li>
+            <li>if you type in what you are looking for, the results come back very fast
+            </li>
         </ul>
-      </li>
+        <li>class goal:
+        </li>
+        <ul>
+            <li>turn some of the magic of a search engine into something a bit more understandable
+            </li>
+        </ul>
+        <li>largest class goal:
+        </li>
+        <ul>
+            <li>learn about computer science
+            </li>
+        </ul>
+        <li>computer science is about how to solve problems like building a search engine by breaking them into smaller pieces and then precisely and mechanically describing a sequence of steps that you can use to solve each piece
+        </li>
+        <ul>
+            <li>these steps can be executed by a computer
+            </li>
+        </ul>
+        <li>for building a search engine, the three main pieces are:
+        </li>
+        <ul>
+            <li>finding data by crawling web pages
+            </li>
+            <li>building an index to be able to respond quickly to search queries
+            </li>
+            <li>ranking pages so that we get the best result for a given query
+            </li>
+        </ul>
+        <li>during course, we won't cover everything you need to build a search engine as powerful as google, but we will cover the main ideas and learn a lot about computer science
+        </li>
+        <ul>
+            <li>first three units:
+            </li>
+            <ul>
+                <li>building the web crawler
+                </li>
+            </ul>
+            <li>units 4 & 5:
+            </li>
+            <ul>
+                <li>how to respond to queries quickly
+                </li>
+            </ul>
+            <li>unit 6:
+            </li>
+            <ul>
+                <li>how to rank results and cover the method Google uses to rank pages, that made it so successful
+                </li>
+            </ul>
+            <li>first we will talk about how to make a web crawler that we are going to use to get data for our search engine
+            </li>
+        </ul>
     </ul>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-3-8">[ND] Box Sizing and Positioning<a href="#" class="right">Back to Top &circ;</a></h3>
-
-    <h4 id="lesson-3-8-1">Summary:<a href="#" class="right">Back to Top &circ;</a></h4>
-    <h5 id="lesson-3-8-1-1">Box Sizing<a href="#" class="right">Back to Top &circ;</a></h5>
-    <p>There are four main points about box sizing:</p>
-    <ol>
-      <li>HTML elements are boxes and each box has 4 components</li>
-      <li>Because there are so many components to each box, it can often be hard to get the size of a box just right</li>
-      <li>There are two techniques you can use to help deal with sizing issues:
-        <ol>
-          <li>Set sizes in terms of percentages rather than pixels</li>
-          <li>Set the box-sizing attribute to border-box for all of the elements</li>
-        </ol>
-      </li>
-      <li>Different browsers work slightly differently which sometimes causes them to display the same code in different ways</li>
-    </ol>
-    <h5 id="lesson-3-8-1-2">Box Positioning<a href="#" class="right">Back to Top &circ;</a></h5>
-    <ol>
-      <li>Divs are block elements (as opposed to inline), so by default they take up the entire width of a page</li>
-      <li>Adding the rule display: flex; to the appropriate CSS will override this behavior and let divs appear next to each other</li>
-    </ol>
-  </div>
-
-  <div class="topic">
-    <h3 id="lesson-3-9">Code, Test, Refine<a href="#" class="right">Back to Top &circ;</a></h3>
-    <ol>
-      <li>Look for natural boxes</li>
-      <li>Look for repeated styles and semantic elements</li>
-      <li>Write your HTML</li>
-      <li>Apply your styles</li>
-      <li>Fix the small things</li>
-      <li>Using developer tools, you can test things easily and see how the changes affect your page without actually changing the HTMl and CSS files</li>
-    </ol>
-  </div>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Advice from Sergey Brin<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>most important thing in building a search engine:
+    </li>
+    <ul>
+        <li>have a good, fun corpus to start with (ex. world-wide web)
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Overview of the Unit<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>the goal of the first three units in this course is to build a web crawler that will collect data from the web for our search engine, and to learn about big ideas in computing by doing that
+    </li>
+    <li>in unit 1, we will get started by extracting the first link on a web page
+    </li>
+    <ul>
+        <li>a web crawler finds web pages for our search engine by starting from a "seed" page and following links on that page to find other pages
+        </li>
+        <li>each of those links leads to some new web page, which itself could have links that lead to other pages
+        </li>
+        <li>as we follow those links, we will have more and more web pages, building a collection of data that we will use for our search engine
+        </li>
+    </ul>
+    <li>a web page is a chunk of text that comes from the internet into your web browser
+    </li>
+    <ul>
+        <li>a link is just a special type of text in that web page
+        </li>
+        <li>when you click on a link in your browser, it will direct you to a new page
+        </li>
+    </ul>
+    <li>what we will do in this unit is write a program to extract that first link from the web page
+    </li>
+    <li>in later units, we will figure out how to extract all of the links and build their collection for our search engine
+    </li>
+    <li>a computer is a machine that can be programmed
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">What is Programming?<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>programming is the core to computer science
+    </li>
+    <li>most machines are only designed to do one thing only
+    </li>
+    <li>without a program, a computer is less useful than a toaster
+    </li>
+    <ul>
+        <li>the program is what tells the computer what to do
+        </li>
+        <li>the power of a computer, is that, unlike a toaster, which is only designed to do a few things, a computer can do anything
+        </li>
+        <li>a computer is a universal machine, and we can program it to do essentially any computation
+        </li>
+        <li>anything that we can imagine and figure out how to write a program for, we can make the computer do
+        </li>
+        <li>a program needs to be a very precise sequence of steps
+        </li>
+        <li>a computer without a program barely knows how to do anything, but it has a few simple instructions that it can execute
+        </li>
+        <ul>
+            <li>to make a program useful, we need to put those instructions together in a way that it does what we want
+            </li>
+        </ul>
+        <li>a computer can to any computation we want it to do
+        </li>
+        <ul>
+            <li>the power of a computer is that it can execute these steps very fast
+            </li>
+            <li>we can execute billions of instructions in one second
+            </li>
+            <li>the program gives us a way to tell the computer what steps to take
+            </li>
+        </ul>
+    </ul>
+    <li>there are many different languages for programming computers
+    </li>
+    <li>we will learn how to use python in this course
+    </li>
+    <li>python is named after Monty Python
+    </li>
+    <li>the important thing about python is that it gives us a nice, high-level language that we can use to write programs
+    </li>
+    <ul>
+        <li>this means that instead of our program running directly on the computer, the programs we write will be an input to the Python program which runs on the computer
+        </li>
+        <li>python is an interpreter
+        </li>
+        <li>this means that it runs our programs, interprets them, executes the programs that we wrote in Python language by running a program in a language that the computer can understand directly
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Getting Started With Python<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>Print is the python command that prints something out
+    </li>
+    <ul>
+        <li>after the print we have an expression and the value of that expression is what gets printed
+        </li>
+        <ul>
+            <li>this can be simple, like the number three, but it can also be a more complicated expression, such as doing some arithmetic
+            </li>
+        </ul>
+    </ul>
+    <li>IDE's have an environment, where the code is edited, as well as a place to see what your code produces
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Language Ambiguity<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>why do we need to invent new languages like Python to program computers, rather than using natural languages?
+    </li>
+    <ul>
+        <li>ambiguity (english words can have multiple meanings, but we need the computer to only interpret the correct meaning of the program)
+        </li>
+        <li>verbosity (normal languages would need too much text)
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Grammar<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>programming languages take things very literally
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Backus-Naur Form<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>the purpose of Backus-Naur form is to be able to precisely describe exactly the language in a way that is very simple and very concise
+    </li>
+    <li>each rule has this form:
+    </li>
+    <ul>
+        <li>&lt;Non-terminal&gt; (something we are not finished with) &rarr; replacement (can be anything (sequence of non-terminals, one non-terminal, terminal))
+        </li>
+        <ul>
+            <li>non-terminals are sometimes written inside brackets
+            </li>
+            <li>&lt;non-terminal&gt; &rarr; replacement
+            </li>
+        </ul>
+        <li>terminals never appear on the left side of a rule
+        </li>
+        <li>we cannot replace terminals
+        </li>
+        <li>we keep replacing the non-terminals with their replacements until there are only terminals left
+        </li>
+        <li>we can form a sentence by starting from some non-terminal
+        </li>
+        <ul>
+            <li>by following the rules, we keep replacing non-terminals with their replacements until we are left with only terminals
+            </li>
+            <li>we usually start with the non-terminal which is written in the top left
+            </li>
+        </ul>
+    </ul>
+    <li>derivation - starting from some non-terminal, follow the rules to derive a sequence of terminals
+    </li>
+    <ul>
+        <li>we can derive a sentence in grammar
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Python Expressions<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>python grammar is much stricter than english grammar
+    </li>
+    <ul>
+        <li>in python, the code must match the language grammar exactly
+        </li>
+        <li>if some code you type is not grammatical, you get a syntax error
+        </li>
+    </ul>
+    <li>we will start looking at python grammar by looking at a non-terminal expression
+    </li>
+    <li>an expression is something that has a value
+    </li>
+    <ul>
+        <li>we can make an expression by combining two expressions with an operator
+        </li>
+        <ul>
+            <li>this is sort of like the sentence rule we have for english where we could make a sentence by combining a subject, a verb, and an object
+            </li>
+            <ul>
+                <li>this is a lot more interesting, though, because we have expressions on both the left side and the right side, so it looks kind of circular
+                </li>
+                <ul>
+                    <li>because we have other rules, it is not completely circular
+                    </li>
+                    <ul>
+                        <li>this is what is called a recursive definition
+                        </li>
+                    </ul>
+                </ul>
+            </ul>
+            <li>part of python grammar:
+            </li>
+            <ul>
+                <li>expression &rarr; expression operator expression
+                </li>
+                <li>expression &rarr; number
+                </li>
+                <li>expression &rarr; (expression)
+                </li>
+                <li>operator &rarr; +
+                </li>
+                <li>operator &rarr; *
+                </li>
+                <li>number &rarr; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 . . .
+                </li>
+            </ul>
+        </ul>
+        <li>recursive grammar rules are very powerful
+        </li>
+        <li>we only need a few simple rules to describe a big language
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Speed of Light<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>speed of light = 2997924458 meters per second
+    </li>
+    <li>meter = 100 centimeters
+    </li>
+    <li>nanosecond - one billionth of a second
+    </li>
+    <li>python does multiplication more accurately if you change the decimal point of a number (ex. 1 versus 1.0)
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Processors<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>using "apple menu, about this mac" you can find out what type of processor you have
+    </li>
+    <li>GHC stands for gigahertz
+    </li>
+    <li>if we have the processor 2.7 GHZ Intel Core, we can do 2.7 billion cycles in one second
+    </li>
+    <li>the time that the computer has to do one step is a cycle
+    </li>
+    <li>in this case the computer has less than a nanosecond
+    </li>
+    <li>in the time that a computer has to do one cycle, light travels 11.1 centimeters
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Grace Hopper<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>Admiral grace hopper was one of the pioneers in computing
+    </li>
+    <li>she was famous for carrying a nanostick
+    </li>
+    <ul>
+        <li>a nanostick is a stick with the length of the distance that light travels in one nanosecond
+        </li>
+    </ul>
+    <li>she was famous for writing one of the first languages
+    </li>
+    <ul>
+        <li>she wrote COBOL
+        </li>
+        <li>COBOL was for a long time the most widely-used computer language
+        </li>
+    </ul>
+    <li>she was one of the first people to think about writing languages this way
+    </li>
+    <li>quote from grace hopper:
+    </li>
+    <ul>
+        <li>"Nobody believed that I had a running compiler and nobody would touch it.  They told me computers could only do arithmetic."
+        </li>
+        <ul>
+            <li>a compiler is a program that produces other programs, like python
+            </li>
+            <li>the difference between a compiler and an interpreter like python is that the compiler does all the work at once and then runs the new program whereas with an interpreter like python, you're doing this work at the same time
+            </li>
+        </ul>
+    </ul>
+</ul>
+</div></div>
 </div>
+<div class="topic"><h3 class="topic">Stage 2: Work Session 1<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">Practice: Apply What You Learned<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>debugging is one of the 5 ways that programmers think
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Before You Continue<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>programming mistakes are called bugs
+    </li>
+</ul>
+</div></div>
+</div>
+<div class="topic"><h3 class="topic">2.2 Variables and Strings<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">[ND] Where to Focus Your Attention<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>one of the most important topics in programming is the variable
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Variables<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>in python, we can use variables to create a name and use that name to refer to a variable
+    </li>
+    <li>the way to introduce a variable is to use an assignment statement
+    </li>
+    <ul>
+        <li>assignment statement layout:
+        </li>
+        <ul>
+            <li>name=expression
+            </li>
+            <ul>
+                <li> the name refers to the value that the expression has
+                </li>
+                <li>the name can be any sequence of letters and numbers, as well as underscores, as long as it starts with a letter or underscore (ex.)
+                </li>
+                <li>speed_of_light=299792458
+                </li>
+                <li>the name speed_of_light refers to the value 299792458
+                </li>
+                <li>way to refer to this:
+                </li>
+                <li>speed_of_light &rarr; 299792458
+                </li>
+                <li>arrow means "refers to"
+                </li>
+            </ul>
+            <li>once we are done with the assignment, we can use the name and the value of that name is the value that it refers to
+            </li>
+        </ul>
+        <li>we can use variables to make our programs easier to understand, and to use the same expression multiple times
+        </li>
+        <li>we can write comments if we start with a hash symbol
+        </li>
+        <li>comments are not interpreted in python
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Variables can Vary<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>we can change the value of a variable and the next time we use it, it will correspond to the new value
+    </li>
+    <li>we can use variables in their own assignment statements (ex.)
+    </li>
+    <ul>
+        <li>days=days-1
+        </li>
+    </ul>
+    <li>in python, equal signs mean assignments
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Strings<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>in the early days of computing, people thought of computers as very powerful calculators
+    </li>
+    <li>they could simulate nuclear weapons
+    </li>
+    <li>they could compute ballistic tables
+    </li>
+    <li>they could break encryptions
+    </li>
+    <ul>
+        <li>this was a little more than just arithmetic, but it was still mostly about counting doing simple arithmetic
+        </li>
+    </ul>
+    <li>computers can operate on any kind of data we want
+    </li>
+    <li>this gets much more interesting when we operate on data besides just numbers
+    </li>
+    <li>if we are going to build a search engine, most of the data that we want to deal with is not numbers, but the letters that are contained in web pages, and in python these are called strings
+    </li>
+    <li>a string is just a sequence of characters surrounded by quotes
+    </li>
+    <li>we have to print strings or variables to make words, because if we do not have quotes around the words, it looks like a variable that we did not define
+    </li>
+    <li>we can use either double quotes or single quotes to surround a string, as long as we use the same type of quote to start the string as we do to end it
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Ada<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>Augusta Ada King = "Countess of Lovelace"
+    </li>
+    <li>she is the world's first programmer
+    </li>
+    <li>in the 1840's, she started to think about how to program mechanical computers
+    </li>
+    <ul>
+        <li>she was the first person to do this
+        </li>
+        <li>charles babbage was starting to build these (analytical engine)
+        </li>
+        <li>he never succeeded in building it because 1840's technology was not enough for building something that precise, but he had a design for it, and ada was thinking about programming it to do more interesting things
+        </li>
+        <li>grace hopper was not the first person to think about doing things other than arithmetic with computers
+        </li>
+        <ul>
+            <li>ada was thinking about this in the 1840's
+            </li>
+        </ul>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Hello!!! Solution<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>the value of a string + another string is concatenation
+    </li>
+    <ul>
+        <li>this is a new string that is the result of pasting the two strings together
+        </li>
+        <li>concatenation does not immediately add spaces
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Strings and Numbers<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>we cannot concatenate strings and numbers together
+    </li>
+    <li>we can multiply strings by numbers so that they repeat themselves
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Indexing Strings<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>we can extract subsequences from the strings, but not numbers
+    </li>
+    <li>a string is a sequence of characters
+    </li>
+    <li>if we have a string, we can use square brackets to extract parts of that string
+    </li>
+    <ul>
+        <li>example:
+        </li>
+        <li>"udacity"[2] = a
+        </li>
+        <li>in this case, we only select the 2nd character in the string
+        </li>
+        <li>we can also say:
+        </li>
+        <li>"udacity"[1+1] = a
+        </li>
+        <li>positive numbers count from left to right
+        </li>
+        <li>negative numbers count from right to left
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Selecting Sub-sequences<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>indexing strings:
+    </li>
+    <ul>
+        <li>&lt;string&gt;[&lt;expression&gt;]
+        </li>
+    </ul>
+    <li>selecting a sub-sequence of the string:
+    </li>
+    <ul>
+        <li>&lt;string&gt;[&lt;expression&gt;:&lt;expression&gt;]
+        </li>
+        <li>the sub-sequence starts at the first expression and ends at the second
+        </li>
+        <li>in all of these, the expression must equate to a number
+        </li>
+        <li>in sub-sequences, the selected characters are the first character stated to the one right before the second one stated
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Finding Strings Inside Strings<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>the "Find" operation helps us find a small sub-string in a huge string
+    </li>
+    <li>Find is a method, or a built in procedure provided by python
+    </li>
+    <li>find is a procedure that operates on strings, so we use it by having a string followed by .find, followed by a parentheses, then we pass in another string (which is the string that we want to find in the huge string)
+    </li>
+    <ul>
+        <li>&lt;string&gt;.find(&lt;string&gt;)
+        </li>
+    </ul>
+    <li>the output of find is the position in the string where that sub-string is found, the first occurrence of the string
+    </li>
+    <ul>
+        <li>if that string occurs in more than one place in the input string, the result of find will always give you the position, or the number where the first occurrence of the sub-string occurs
+        </li>
+    </ul>
+    <li>the output of using find will be a number representing the first position in the search string, where the target string first occurs
+    </li>
+    <ul>
+        <li>if the target string is not found anywhere in the search string, then the output would be negative 1
+        </li>
+        <li>for the position, the number is the number of the character in the search string that the target string starts from
+        </li>
+        <li>we can validate the number using string indexing
+        </li>
+        <li>the result of finding an empty string is always 0
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">[ND] Focus Checkpoint<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>parameters are what are inside the parentheses for find
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Finding with Numbers<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>for find, we can add an extra parameter, which is a number
+    </li>
+    <ul>
+        <li>normally find will find the first occurrence of the target string in the search string, but using the extra parameter (which is the number of a character in the search string), find will locate the first occurrence of the target string after the character with the number of the parameter
+        </li>
+        <ul>
+            <li>if the extra parameter that you add is a number that is in the middle of one occurrence of the target string, the find output will be the occurrence after that
+            </li>
+            <li>&lt;string&gt;.find(&lt;string&gt;, &lt;number&gt;)
+            </li>
+        </ul>
+    </ul>
+</ul>
+</div></div>
+</div>
+<div class="topic"><h3 class="topic">2.3 Input->Function->Output<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">[ND] Where You Left Off<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>functions are one of the most important ideas in programming
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">[ND] Where to Focus Your Attention<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>we can make functions that, when given a little bit of text as input (maybe a name and a concept description), will automatically generate HTML
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Dave, Sebastian, and Junior<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>taking data in is essential to making self driving cars work
+    </li>
+    <li>self driving cars have lots of sensors that take data in
+    </li>
+    <li>the sensors and cameras take data in and then funnel it back into the car so that it does not bump into anything when it is driving
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Using Procedures<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>how to use a procedure
+    </li>
+    <li>a procedure is a function
+    </li>
+    <ul>
+        <li>the inputs below are often called operands, or arguments
+        </li>
+        <li>&lt;procedure&gt;(&lt;input&gt;, &lt;input&gt;, . . . )
+        </li>
+        <li>find is similar since you use one or two inputs (the two strings)
+        </li>
+        <ul>
+            <li>it is also different since the inputs are separate and it is built in, rather than you having to define it
+            </li>
+        </ul>
+    </ul>
+    <li>for the procedures that I will define myself, there will be no object to invoke them on
+    </li>
+    <li>the number of parameters in a def is the same as the number of inputs
+    </li>
+    <li>example:
+    </li>
+    <ul>
+        <li>def rest_of_string(s):
+        </li>
+        <ul>
+            <li>return s[1:]
+            </li>
+        </ul>
+    </ul>
+    <li>way to use this:
+    </li>
+    <ul>
+        <li>print rest_of_string("hello")
+        </li>
+        <li>this will print: ello
+        </li>
+    </ul>
+    <li>we must have return statements in defs, otherwise our output will be "none"
+    </li>
+</ul>
+</div></div>
+</div>
+<div class="topic"><h3 class="topic">Stage 2: Work Session 3<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">Practice: Apply What You Learned<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>calling a function is the same as using a function
+    </li>
+</ul>
+</div></div>
+</div>
+<div class="topic"><h3 class="topic">2.4 Control Flow and Loops: If and While<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">[ND] Where to Focus Your Attention<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>if statements control which code gets executed when
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Equality Comparisons<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>we can make code behave differently based on certain decisions
+    </li>
+    <li>Boolean Value
+    </li>
+    <ul>
+        <li>true or false
+        </li>
+    </ul>
+    <li>we can make comparisons of numbers
+    </li>
+    <ul>
+        <li>&lt;number&gt;&lt;operator&gt;&lt;number&gt;
+        </li>
+        <li>!= is not equal to
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">If Statements<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+        if &lt;test expression&gt;:
+                &lt;block&gt;
+</div></div>
+<div class="subtopic"><h4 class="topic">Or<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>if we have multiple constraints we can use or, just like else
+    </li>
+    <li>&lt;expression&gt; or &lt;expression&gt;
+    </li>
+    <ul>
+        <li>if the first expression evaluates to true, the value is true and the second expression is not evaluated.
+        </li>
+        <li>if the first expression evaluates to false, the value is the value of the second expression
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Biggest Solution<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>we can define any of the built in procedures in python
+    </li>
+    <li>Alan Turing was the probably most important computer scientist
+    </li>
+    <li>in 1936 he developed an abstract model of a computer which we now know as the "Turing machine"
+    </li>
+    <li>he proved that a machine with a few simple operations could simulate any other machine
+    </li>
+    <li>in the 1930's, people thought a computer was a person who did calculations
+    </li>
+    <li>Alan Turing helped break the enigma code in Bletchley Park
+    </li>
+    <ul>
+        <li>the enigma code was the most widely used cypher code by the Nazis
+        </li>
+        <li>Alan Turing built machines that could be used to break the Enigma code
+        </li>
+        <ul>
+            <li>these machines were sort of like computers in that they did lots of calculations
+            </li>
+            <li>unlike computers, these machines were not programmable
+            </li>
+            <li>they could only do a specific calculation that was useful for breaking the code
+            </li>
+        </ul>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">While Loops<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>a loop is a way to do things over and over again
+    </li>
+    <li>while loop:
+    </li>
+    <ul>
+        <li>while &lt;test expression&gt;:
+        </li>
+        <ul>
+            <li>&lt;block&gt;
+            </li>
+        </ul>
+    </ul>
+    <li>the block is a set of instructions
+    </li>
+    <li>while loops are similar to the if statement
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Break Statement<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>break is a way to stop the while loop after a while
+    </li>
+    <li>while &lt;test expression&gt;
+    </li>
+    <ul>
+        <li>&lt;code&gt;
+        </li>
+        <li>if &lt;break test&gt;
+        </li>
+        <ul>
+            <li>break
+            </li>
+        </ul>
+        <li>&lt;more code&gt;
+        </li>
+    </ul>
+    <li>&lt;after while&gt;
+    </li>
+</ul>
+</div></div>
+</div>
+<div class="topic"><h3 class="topic">2.5 Debugging<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">Bugs Happen<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>Maurice Wilkes invented the EDSAC, one of the world's first programmable computers
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Strategy: Examine Error Messages<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>sometimes it is very obvious that code has a bug since it crashes and gives an error message
+    </li>
+    <li>we can examine these error messages to see what we are doing wrong
+    </li>
+    <li>in python, the error message is called an error message is called a traceback
+    </li>
+    <li>a traceback tells you what line you made an error in, and how it got there
+    </li>
+    <li>we can't add integers to strings
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Strategy: Work from a Working Example<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>programmers try making random changes to their non working code
+    </li>
+    <li>try debugging step by step
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Strategy: Check Intermediate Results<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>bugs that crash our code are harder to fix than bugs that don't
+    </li>
+    <li>we can remove parts of strings:
+    </li>
+    <ul>
+        <li># Try adding print statements to look at the values of variables inside
+        </li>
+        <li># the remove function.  See if you can find out what's making it give
+        </li>
+        <li># silly answers such as remove('ding', 'do') -> 'dining'.
+        </li>
+        <li>   * def remove(somestring, sub):
+        </li>
+        <li>    "Return somestring with sub removed."
+        </li>
+        <li>    location = somestring.find(sub)
+        </li>
+        <li>    length = len(sub)
+        </li>
+        <li>    part_before = somestring[:location]
+        </li>
+        <li>    part_after = somestring[location + length:]
+        </li>
+        <li>    if sub not in somestring:
+        </li>
+        <li>        return somestring
+        </li>
+        <li>    return part_before + part_after
+        </li>
+        <li>   * #
+        </li>
+        <li># Don't change these test cases!
+        </li>
+        <li>print remove('audacity', 'a')
+        </li>
+        <li>print remove('pythonic', 'ic')
+        </li>
+        <li>print remove('substring institution', 'string in')
+        </li>
+        <li>print remove('ding', 'do')  # "do" isn't in "ding"; should print "ding"
+        </li>
+        <li>print remove('doomy', 'dooming')  # and this should print "doomy"
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Strategy: Keep and Compare Old Versions<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>if you want to see old versions of code, you can comment out the old versions
+    </li>
+    <li>you can also copy the separate versions into different files
+    </li>
+    <li>you can also use github
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Debugging as a Scientific Process<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>debugging is a scientific process that helps you find stuff in your code that you did not expect there
+    </li>
+    <li>correctly locating errors is a big part of writing reliable software
+    </li>
+</ul>
+</div></div>
+</div>
+<div class="topic"><h3 class="topic">Stage 2: Work Session 4<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">Practice Part 2<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>in modular code, the "data" is separated from its visual presentation so that you can change one without worrying about the other
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Step 2: Make a Strategy [slides]<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>if we want to write code that takes in text and spits out the text in HTML that we can use for our web page, we need to write a function
+    </li>
+    <li>in this case, it would be a terrible idea to try and get all of the output with just one function since it is too much to do all at once
+    </li>
+    <li>instead, we should use just one concept at a time
+    </li>
+    <ul>
+        <li>this will require a simpler function
+        </li>
+        <ul>
+            <li>this function will have to accept a second input so we can tell it which concept to make HTML for
+            </li>
+        </ul>
+        <li>now that we have compressed the problem, we can think about how to solve it
+        </li>
+        <li>we can write four smaller functions
+        </li>
+        <ul>
+            <li>get concept by number
+            </li>
+            <ul>
+                <li>get title
+                </li>
+                <li>get description
+                </li>
+            </ul>
+            <li>generate concept HTML
+            </li>
+        </ul>
+    </ul>
+</ul>
+</div></div>
+</div>
+<div class="topic"><h3 class="topic">2.6 Structured Data: Lists and For Loops<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">[ND] Where to Focus Your Attention<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>we can use for loops to iterate over structured data
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Introduction<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>the next thing we will need for our web crawler is structured data
+    </li>
+    <li>the closest thing we have seen to structured data is the string data type
+    </li>
+    <li>a string is structured data because we can break it down into separate characters
+    </li>
+    <ul>
+        <li>the string is a sequence of characters and we can operate on subsequences of the string
+        </li>
+    </ul>
+    <li>what we can do with strings is somewhat limited since all we can put inside the string is a character
+    </li>
+    <li>we will learn about the list data type
+    </li>
+    <ul>
+        <li>lists are more powerful than strings because a list can be a sequence of anything, rather than just characters
+        </li>
+        <ul>
+            <li>lists can contain characters, strings, numbers, or even other lists
+            </li>
+        </ul>
+    </ul>
+    <li>to identify a list, we use square brackets instead of quotes
+    </li>
+    <li>just like strings, we can use square brackets to index a list
+    </li>
+    <li>we can have blank lists
+    </li>
+    <li>lists have this layout:
+    </li>
+    <ul>
+        <li>&lt;list&gt; &rarr; [&lt;expression&gt;, &lt;expression&gt;, . . . ]
+        </li>
+    </ul>
+    <li>we can use lists in assignment statements
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Nested Lists<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>we can make lists with mixed elements
+    </li>
+    <li>if we have a long list and we can not fit it on one line, we can divide it into multiple lines as long as we divide it each time after a comma
+    </li>
+    <li>we can use multiple indexes to find a an item inside a list item inside a list item and so on
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Mutation<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>there are two major differences between strings and lists
+    </li>
+    <ul>
+        <li>one is that a list can hold anything we want while strings can only hold characters
+        </li>
+        <li>the other is that lists support mutation
+        </li>
+        <ul>
+            <li>this means that we can change the value of a list after we have created it
+            </li>
+            <li>this is powerful, but it also makes our code a lot harder to read and understand
+            </li>
+        </ul>
+    </ul>
+    <li>we can assign a variable to a string and change the variable, but we cannot change a string with no variable assigned to it
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">A List of Strings<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>example of mutation:
+    </li>
+    <ul>
+        <li>p = ["H", "e", "l", "l", "o"]
+        </li>
+        <li>p[0] = "Y"
+        </li>
+        <li>aliasing is when we have two ways to refer to the same object
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">List Operations<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>append is a method
+    </li>
+    <ul>
+        <li>we can use this to add elements to the end of a list
+        </li>
+        <li>this mutates the old list
+        </li>
+        <li>&lt;list&gt;.append(&lt;element&gt;)
+        </li>
+        <ul>
+            <li>this adds &lt;element&gt; to &lt;list&gt; as 1 list item
+            </li>
+        </ul>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">List Addition and Length<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <ul>
+        <li>now, if we print p, we will get:
+        </li>
+        <li>["Y", "e", "l", "l", "o"]
+        </li>
+        <li>if we assign the variable q to p, we can change q and that will change p at the same time
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Aliasing<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>&lt;list&gt; + &lt;list&gt;
+    </li>
+    <ul>
+        <li>like concatenation for strings
+        </li>
+    </ul>
+    <li>len(&lt;list&gt;)
+    </li>
+    <ul>
+        <li>states the length of a string or list
+        </li>
+        <li>len starts at 1, not 0
+        </li>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">For Loops<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>for &lt;name&gt; in &lt;list&gt;:
+    </li>
+    <ul>
+        <li>&lt;block&gt;
+        </li>
+    </ul>
+    <li>a variable defined outside (before) a loop and which is changed for each iteration of the loop is called an accumulator
+    </li>
+    <ul>
+        <li>for instance it can represent a sum, a product, or a count
+        </li>
+    </ul>
+    <li>common layout loops:
+    </li>
+    <ul>
+        <li>function
+        </li>
+        <ul>
+            <li>accumulator variable
+            </li>
+            <li>loop
+            </li>
+            <ul>
+                <li>loop body
+                </li>
+            </ul>
+            <li>return accumulator
+            </li>
+        </ul>
+    </ul>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Index<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>&lt;list&gt;.index(&lt;value&gt;)
+    </li>
+    <li>this is returns the index of the value in a list, but if the value does not exist in the list, it returns an error rather than -1
+    </li>
+    <li>if there are more than one occurrences of the value, it gives you the first one
+    </li>
+instead, we can use &lt;value&gt; in &lt;list&gt;
+    <ul>
+        <li>this prints true or false
+        </li>
+        <li>we can also use "not in" , which is the exact opposite
+        </li>
+    </ul>
+</ul>
+</div></div>
+</div>
+<div class="topic"><h3 class="topic">2.7 How to Solve Problems<a href="#" class="right">Back to Top &circ;</a></h3>
+</div>
+<div class="topic"><h3 class="topic">Stage 2: Work Session 5<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">Exploring List Properties<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>if we combine two lists using +, we get a list with all of the items in both of the lists
+    </li>
+    <li>if we combine two lists using append, we end up adding the second list as one of the elements of the first list
+    </li>
+</ul>
 
+</div></div>
+</div>
+</div>
 <div class="lesson">
-  <h2 id="lesson-4">
-    Lesson 4: Introduction to Serious Programming
-  </h2>
-  <div class="topic">
-    <h3 id="lesson-4-1">
-      Introduction
-    </h3>
-  </div>
+<h2 class="lesson">3: Program With Objects<a href="#" class="right">Back to Top &circ;</a></h2>
+<div class="topic"><h3 class="topic">3.2 Use Functions<a href="#" class="right">Back to Top &circ;</a></h3>
+<div class="subtopic"><h4 class="topic">Making the Program Wait Longer<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>we can use time.sleep() to make our program wait for a certain number of seconds
+    </li>
+    <li>we can also use time.ctime() to get the current time and date
+    </li>
+    <ul>
+        <li>for both of these, we have to say import time, or import ctime
+        </li>
+    </ul>
+    <li>we can use control+c to stop our program
+    </li>
+</ul>
+</div></div>
+<div class="subtopic"><h4 class="topic">Where Does Webbrowser Come From?<a href="#" class="right">Back to Top &circ;</a></h4>
+<div class="content">
+<ul>
+    <li>inside the Python Standard Library,  are multiple files, which we use to program (like def and webbrowser and time)
+    </li>
+    <ul>
+        <li>inside each of these files are functions which allow the files to work when we use them
+        </li>
+        <li>the fact that we don't really know what makes these functions work is called abstraction
+        </li>
+        <li>abstraction is a major idea in programming since it lets us focus on the program we want to write
+        </li>
+    </ul>
+</ul>
+</div></div>
+</div>
 </div>
 
-<div class="lesson">
-  <h2 id="resources">Resources Used:<a href="#" class="right">Back to Top &circ;</a></h2>
-  <div class="topic">
-    <h3>Images:</h3>
-    <p><a href="http://www.fancyicons.com/free-icons/220/foods/png/256/ice_cream_256.png">ice cream</a></p>
-    <p><a href="https://lh3.googleusercontent.com/--c8480byC9k/AAAAAAAAAAI/AAAAAAAAAJo/SP9LwTne7mA/s46-c-k-no/photo.jpg">notes</a></p>
-    <h3>Websites:</h3>
-    <p><a href="https://www.udacity.com">udacity</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#Inheritance">wikipedia</a></p>
-  </div>
-</div>
 <p>
   <a href="http://jigsaw.w3.org/css-validator/check/referer">
     <img style="border:0;width:88px;height:31px"
@@ -594,3 +1893,4 @@
 </p>
 </body>
 </html>
+

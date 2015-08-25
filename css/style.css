@@ -55,6 +55,10 @@ div.topic > * {
   margin: 0;
 }
 
+div.subtopic > * {
+  padding: 10px;
+}
+
 div.topic ul, div.topic ol {
   padding-left: 30px;
 }
@@ -62,6 +66,16 @@ div.topic ul, div.topic ol {
 div.topic *:first-child {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+div.subtopic * {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.subtopic *:first-child {
+  border-radius: 0px;
+  padding: 10px;
 }
 
 div.topic *:last-child {
@@ -75,6 +89,18 @@ div.topic h3 {
 }
 
 div.topic h4 {
+  -webkit-margin-before: 0px;
+  background-color: peachpuff;
+  border-radius: 0;
+}
+
+div.subtopic {
+  padding: 0;
+  margin: 0;
+}
+
+div.subtopic h4 {
+  -webkit-margin-before: 0px;
   background-color: peachpuff;
   border-radius: 0;
 }
@@ -84,9 +110,14 @@ div.topic h5 {
   border-radius: 0;
 }
 
+div.content {
+  padding: 0 20px 0 10px;
+}
+
 h1 a.right, h2 a.right, h3 a.right, h4 a.right, h5 a.right {
   float: right;
   font-size: 17px;
+  padding-bottom: 10px;
 }
 
 h2 a.right {
